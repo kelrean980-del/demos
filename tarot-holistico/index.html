@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarot, Lenormand & Holistic Therapy | Demo</title>
+<meta name="description" content="Tarot and Lenormand readings, love, career and financial guidance, and holistic therapy to help you make clear everyday decisions.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--n:#231a3a;--p:#4b3a78;--gold:#c9a45c;--c:#f8f4ee;--t:#5d566b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--n);background:var(--c);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.logo{font-family:"Cormorant Garamond",Georgia,serif}
+.demo{background:var(--n);color:#bdb3d3;font-size:12px;text-align:center;padding:4px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 6vw}
+.logo{font-size:26px;font-weight:700;letter-spacing:.5px}.logo span{color:var(--gold)}
+nav a{margin-left:24px;font-size:15px;color:var(--t)}
+.btn{display:inline-block;background:var(--gold);color:var(--n);font-weight:600;padding:14px 26px;border-radius:40px}
+.btn.o{background:transparent;border:1px solid var(--gold);color:#fff}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 75% 30%,#5d4a92 0,var(--n) 60%);color:#fff;padding:90px 6vw 100px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:46px 46px;opacity:.12}
+.hero>*{position:relative}
+.hero small{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.hero h1{font-size:clamp(36px,5.5vw,62px);line-height:1.05;margin:14px 0 18px}
+.hero p{color:#ddd6ec;font-size:18px;max-width:540px;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.moon{justify-self:center;width:min(300px,70vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(201,164,92,.6);display:flex;align-items:center;justify-content:center}
+.moon svg{width:62%}
+section{padding:80px 6vw}
+.c{text-align:center}
+h2{font-size:clamp(30px,4vw,42px);margin-bottom:8px}
+.sub{color:var(--t);max-width:620px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;text-align:left}
+.card{background:#fff;border-radius:16px;padding:30px;border:1px solid #ece4d6}
+.card .i{width:46px;height:46px;border-radius:50%;background:#efe8f9;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--p);font-size:22px}
+.card h3{font-size:25px;margin-bottom:6px}.card p{color:var(--t);font-size:15px}
+.card a{display:inline-block;margin-top:14px;color:var(--p);font-weight:600}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;background:#fff}
+.ph{aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,#d9cdee,#efe2c8);display:flex;align-items:flex-end;justify-content:center;padding:20px;color:var(--t);font-size:13px}
+.about p{color:var(--t);margin-bottom:14px}
+.q{background:var(--n);color:#fff}
+.q blockquote{font-family:"Cormorant Garamond",serif;font-size:clamp(22px,3vw,30px);max-width:760px;margin:0 auto 12px}
+.q span{color:var(--gold);font-size:14px}
+.final{background:linear-gradient(120deg,var(--p),var(--n));color:#fff}
+.final p{color:#ddd6ec;margin:6px auto 26px;max-width:520px}
+footer{padding:28px 6vw;text-align:center;font-size:14px;color:var(--t)}
+@media(max-width:800px){nav{display:none}.hero,.about{grid-template-columns:1fr}.moon{width:200px}.hero{padding:60px 7vw 70px}section{padding:60px 7vw}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / mockup for the proposal. Sample text and placeholder images.</div>
+<header><a class="logo" href="#">Your<span>Name</span></a><nav><a href="#services">Services</a><a href="#about">About</a><a href="#">Testimonials</a><a href="#">Contact</a></nav></header>
+
+<section class="hero">
+<div>
+<small>Tarot · Lenormand · Holistic therapy</small>
+<h1>Turn the cards' wisdom into clear, everyday decisions</h1>
+<p>Honest readings and intuitive guidance for love, career and money, plus holistic sessions to help you feel grounded. No fear, no false promises.</p>
+<div class="cta"><a class="btn" href="#">Book a reading</a><a class="btn o" href="#services">Explore services</a></div>
+</div>
+<div class="moon" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M62 18a34 34 0 1 0 20 50A28 28 0 0 1 62 18z" fill="none" stroke="#c9a45c" stroke-width="1.5"/><g fill="#c9a45c"><circle cx="76" cy="26" r="1.6"/><circle cx="84" cy="44" r="1"/><circle cx="70" cy="40" r="1.2"/></g></svg></div>
+</section>
+
+<section id="services" class="c">
+<h2>How I can help</h2>
+<p class="sub">Choose the kind of guidance you need. Every session ends with practical next steps.</p>
+<div class="grid">
+<div class="card"><div class="i">&#9733;</div><h3>Tarot readings</h3><p>Clarity on a specific question or a full overview of the months ahead.</p><a href="#">Learn more</a></div>
+<div class="card"><div class="i">&#9830;</div><h3>Lenormand readings</h3><p>Concrete, down-to-earth answers about people, events and timing.</p><a href="#">Learn more</a></div>
+<div class="card"><div class="i">&#9825;</div><h3>Love, career & money</h3><p>Focused guidance for the decisions that matter most right now.</p><a href="#">Learn more</a></div>
+<div class="card"><div class="i">&#10047;</div><h3>Holistic therapy</h3><p>Intuitive sessions to release stress and reconnect with yourself.</p><a href="#">Learn more</a></div>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="ph">Your photo here</div>
+<div><h2>Hi, I'm [Your Name]</h2>
+<p>Cartomancer, psychic and holistic therapist. I help clients read what the cards are showing and turn it into calm, practical choices.</p>
+<p>My approach is warm and honest: the reading is a tool for you to decide, never a sentence.</p>
+<a class="btn" href="#">Read my story</a></div>
+</section>
+
+<section class="q c"><blockquote>"The reading gave me the calm I needed to finally make my career decision."</blockquote><span>Sample testimonial</span></section>
+
+<section class="final c"><h2>Ready for your reading?</h2><p>Send a message with your question and I'll reply with the best session for you.</p><a class="btn" href="#">Contact me</a></section>
+<footer>© Your Name · Homepage mockup by Cristian Rico</footer>
+</body></html>

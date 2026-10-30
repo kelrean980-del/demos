@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Construcción, andamios y desmonte en Lima | Demo</title>
+<meta name="description" content="Alquiler de andamios, eliminación de desmonte, venta de materiales y servicios de construcción en Lima. Cotiza por WhatsApp en minutos.">
+<meta name="robots" content="noindex">
+<style>
+:root{--y:#f5b400;--d:#1d2329;--g:#5b6670;--l:#f4f5f7;--w:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--d);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.demo{background:var(--d);color:#cfd5da;font-size:12px;text-align:center;padding:4px}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 1px 0 #e5e7eb}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.5px}.logo span{background:var(--y);padding:0 6px;margin-right:4px}
+nav a{margin-left:22px;font-weight:600;font-size:15px;color:var(--g)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--w);color:#fff;font-weight:700;padding:14px 22px;border-radius:8px;font-size:16px}
+.btn.alt{background:transparent;border:2px solid #fff}
+.hero{background:linear-gradient(120deg,rgba(29,35,41,.94),rgba(29,35,41,.75)),repeating-linear-gradient(45deg,#3a434b 0 18px,#2e363d 18px 36px);color:#fff;padding:80px 5vw 90px}
+.hero small{color:var(--y);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.1;margin:12px 0 18px;max-width:760px}
+.hero p{font-size:18px;max-width:620px;color:#d7dce0;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:26px;margin-top:38px;font-size:15px;color:#e8ecef}
+.trust b{color:var(--y);font-size:22px;display:block}
+section{padding:70px 5vw}
+h2{font-size:clamp(24px,3.5vw,34px);margin-bottom:10px}
+.sub{color:var(--g);margin-bottom:34px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.ph{height:150px;background:linear-gradient(135deg,#ffd45c,var(--y));display:flex;align-items:center;justify-content:center;color:var(--d);font-weight:700;font-size:13px;letter-spacing:.5px}
+.ph svg{width:64px;height:64px}
+.card div.t{padding:18px;flex:1;display:flex;flex-direction:column}
+.card h3{font-size:19px;margin-bottom:6px}.card p{color:var(--g);font-size:15px;flex:1}
+.card a{margin-top:14px;font-weight:700;color:#128c4a}
+.bg{background:var(--l)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.steps div{background:#fff;padding:22px;border-radius:12px;border-left:5px solid var(--y)}
+.steps div:before{counter-increment:s;content:counter(s);font-weight:800;font-size:28px;color:var(--y)}
+.steps h3{margin:4px 0}.steps p{color:var(--g);font-size:15px}
+.zonas{display:flex;flex-wrap:wrap;gap:10px}.zonas span{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:8px 16px;font-size:14px}
+.final{background:var(--y);text-align:center}
+.final p{margin:8px auto 24px;max-width:520px}
+.final .btn{background:var(--d)}
+footer{background:var(--d);color:#aeb6bd;padding:30px 5vw;font-size:14px;text-align:center}
+.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--w);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:9}
+.wa svg,.btn svg{fill:#fff}
+@media(max-width:720px){nav{display:none}.hero{padding:56px 6vw 64px}section{padding:52px 6vw}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto para la propuesta. Textos e imágenes de ejemplo.</div>
+<header><a class="logo" href="#"><span>TU</span>CONSTRUCTORA</a>
+<nav><a href="#servicios">Servicios</a><a href="#como">Cómo trabajamos</a><a href="#zonas">Zonas</a></nav></header>
+
+<section class="hero">
+<small>Lima · Construcción y obra</small>
+<h1>Andamios, desmonte y materiales para tu obra, sin vueltas</h1>
+<p>Alquiler de andamios, eliminación de desmonte, venta de materiales y servicios de construcción para maestros de obra y particulares. Cotiza por WhatsApp y te respondemos al momento.</p>
+<div class="cta"><a class="btn" href="#"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1 0 .1.6-.1 1.1z"/></svg>Cotizar por WhatsApp</a><a class="btn alt" href="#servicios">Ver servicios</a></div>
+<div class="trust"><div><b>24 h</b>Entrega de andamios</div><div><b>Precio</b>cerrado por obra</div><div><b>Lima</b>y alrededores</div></div>
+</section>
+
+<section id="servicios">
+<h2>Nuestros servicios</h2>
+<p class="sub">Todo lo que necesitas para avanzar en tu obra, con un solo contacto.</p>
+<div class="grid">
+<div class="card"><div class="ph"><svg viewBox="0 0 24 24"><path fill="#1d2329" d="M3 2h2v20H3zm16 0h2v20h-2zM5 6h14v2H5zm0 6h14v2H5zm0 6h14v2H5z"/></svg></div><div class="t"><h3>Alquiler de andamios</h3><p>Andamios por días, semanas o meses, con entrega y recojo en obra.</p><a href="#">Cotizar andamios por WhatsApp</a></div></div>
+<div class="card"><div class="ph"><svg viewBox="0 0 24 24"><path fill="#1d2329" d="M1 16h15V7h4l3 4v5h-2a2.5 2.5 0 0 1-5 0H9a2.5 2.5 0 0 1-5 0H1zm3.5 1.5a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm12 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/></svg></div><div class="t"><h3>Eliminación de desmonte</h3><p>Retiramos escombros y desmonte de tu obra o vivienda de forma rápida.</p><a href="#">Pedir recojo por WhatsApp</a></div></div>
+<div class="card"><div class="ph"><svg viewBox="0 0 24 24"><path fill="#1d2329" d="M2 18h20v3H2zm2-5h7v4H4zm9 0h7v4h-7zM8 8h8v4H8z"/></svg></div><div class="t"><h3>Venta de materiales</h3><p>Arena, piedra, cemento, fierro y más, con reparto a tu obra.</p><a href="#">Consultar stock por WhatsApp</a></div></div>
+<div class="card"><div class="ph"><svg viewBox="0 0 24 24"><path fill="#1d2329" d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3z"/></svg></div><div class="t"><h3>Servicios de construcción</h3><p>Obras, ampliaciones y remodelaciones para particulares y negocios.</p><a href="#">Contar mi proyecto por WhatsApp</a></div></div>
+</div>
+</section>
+
+<section id="como" class="bg">
+<h2>Cómo trabajamos</h2>
+<p class="sub">Sin formularios largos. Todo por WhatsApp.</p>
+<div class="steps">
+<div><h3>Escríbenos</h3><p>Dinos qué necesitas y en qué distrito está la obra.</p></div>
+<div><h3>Te cotizamos</h3><p>Recibes un precio cerrado en minutos.</p></div>
+<div><h3>Entregamos</h3><p>Llevamos el material o el equipo a tu obra.</p></div>
+</div>
+</section>
+
+<section id="zonas">
+<h2>Zonas de atención</h2>
+<p class="sub">Atendemos en Lima Metropolitana (lista de ejemplo, se adapta a tus zonas reales).</p>
+<div class="zonas"><span>Lima Norte</span><span>Lima Sur</span><span>Lima Este</span><span>Lima Centro</span><span>Callao</span></div>
+</section>
+
+<section class="final">
+<h2>Cotiza tu obra hoy</h2>
+<p>Respuesta rápida por WhatsApp de lunes a sábado.</p>
+<a class="btn" href="#">Escribir por WhatsApp</a>
+</section>
+
+<footer>© Tu Constructora · Lima, Perú · Boceto de portada preparado por Cristian Rico</footer>
+<a class="wa" href="#" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1 0 .1.6-.1 1.1z"/></svg></a>
+</body></html>
