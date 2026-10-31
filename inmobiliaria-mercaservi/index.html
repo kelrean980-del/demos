@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercaservi | Boceto de propuesta de portada (no oficial)</title>
+<meta name="description" content="Boceto de propuesta de portada para una inmobiliaria en Vinaròs. No es la web oficial del negocio.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--navy:#12263a;--blue:#1f4e79;--sea:#2b7a9b;--sand:#f3ede2;--acc:#d9822b;--ink:#1b2430;--mut:#5d6875;--line:#e3ddd1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.ribbon{background:#fff4d6;color:#6b4a00;font-size:13px;text-align:center;padding:7px 12px;border-bottom:1px solid #f0dc9e}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-weight:800;font-size:22px;letter-spacing:.01em;color:var(--navy)}
+.brand small{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sea)}
+.menu a{margin-left:24px;font-size:15px;color:var(--mut)}
+.menu a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:13px 22px;border-radius:10px}
+.btn.alt{background:transparent;border:1.5px solid #fff;color:#fff}
+.hero{position:relative;color:#fff;background:
+ radial-gradient(1200px 500px at 85% 110%,rgba(43,122,155,.55),transparent 60%),
+ linear-gradient(160deg,#12263a 0%,#1f4e79 60%,#2b7a9b 100%);overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;background:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath d='M0 60 C240 20 480 90 720 55 C960 20 1200 80 1440 45 L1440 90 L0 90Z' fill='%23ffffff'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:120px}
+.hero h1{font-size:clamp(32px,4.8vw,54px);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+.hero p{font-size:18px;color:#d6e4ee;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.search{background:#fff;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.search h2{font-size:18px;margin-bottom:14px}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tabs span{flex:1;text-align:center;padding:9px;border-radius:9px;background:var(--sand);font-weight:600;font-size:14px}
+.tabs span.on{background:var(--navy);color:#fff}
+.field{display:block;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:10px;font-size:15px;color:var(--mut);background:#fafafa}
+.search .btn{width:100%;text-align:center;margin-top:4px}
+section{padding:64px 0}
+h2.t{font-size:clamp(26px,3.2vw,34px);color:var(--navy);margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:30px;max-width:640px}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc div{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:12px}
+.svc h3{font-size:17px;margin-bottom:6px;color:var(--navy)}
+.svc p{font-size:15px;color:var(--mut)}
+.props{background:var(--sand)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prop{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.ph{aspect-ratio:16/10;position:relative}
+.ph.a{background:linear-gradient(180deg,#8ec5de 0 55%,#e9dcc3 55% 100%)}
+.ph.b{background:linear-gradient(180deg,#f3c98b 0 50%,#2b7a9b 50% 100%)}
+.ph.c{background:linear-gradient(180deg,#b9d7c6 0 60%,#d8c7a4 60% 100%)}
+.ph svg{position:absolute;left:50%;bottom:18%;transform:translateX(-50%);width:46%;opacity:.9}
+.ph em{position:absolute;top:12px;left:12px;font-style:normal;font-size:12px;font-weight:700;background:#fff;color:var(--navy);padding:4px 10px;border-radius:999px}
+.prop .b2{padding:16px 18px}
+.prop h3{font-size:17px;color:var(--navy)}
+.prop p{font-size:14px;color:var(--mut)}
+.feat{display:flex;gap:14px;font-size:13px;color:var(--mut);margin-top:10px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.why ul{list-style:none}
+.why li{padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
+.why li::before{content:"";position:absolute;left:0;top:15px;width:20px;height:20px;border-radius:50%;background:var(--acc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.4' fill='none'/%3E%3C/svg%3E") center/14px no-repeat}
+.panel{background:var(--navy);color:#fff;border-radius:20px;padding:32px}
+.panel h3{font-size:22px;margin-bottom:8px}
+.panel p{color:#c9d8e4;margin-bottom:18px}
+.contact{background:var(--navy);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#9fc3d8;margin-bottom:6px}
+.contact p{color:#e6eef4}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;font-weight:700;padding:13px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.2);font-size:15px}
+footer{background:#0c1b29;color:#8ea4b6;font-size:13px;padding:18px 0;text-align:center}
+@media (max-width:900px){.hero .wrap,.why{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.contact .wrap{grid-template-columns:1fr}}
+@media (max-width:620px){.menu a:not(:last-child){display:none}.svc,.grid{grid-template-columns:1fr}.hero .wrap{padding-top:44px;padding-bottom:100px}section{padding:46px 0}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Boceto de propuesta, no oficial. Textos de ejemplo, sin fotos ni logotipo del negocio.</div>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#">Mercaservi<small>Servicios inmobiliarios · Vinaròs</small></a>
+  <nav class="menu"><a href="#venta">Venta</a><a href="#venta">Alquiler</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <div>
+   <h1>Tu casa en Vinaròs y el Baix Maestrat, sin complicaciones</h1>
+   <p>Compra, venta y alquiler de pisos, casas, apartamentos y locales en Vinaròs, Benicarló y alrededores. Te acompañamos en todo el proceso, de la primera visita a la firma.</p>
+   <div class="cta"><a class="btn" href="#venta">Ver inmuebles</a><a class="btn alt" href="#contacto">Quiero vender mi casa</a></div>
+  </div>
+  <form class="search" onsubmit="return false" aria-label="Buscador de ejemplo">
+   <h2>Busca tu inmueble</h2>
+   <div class="tabs"><span class="on">Comprar</span><span>Alquilar</span></div>
+   <span class="field">Zona: Vinaròs, Benicarló, Peñíscola...</span>
+   <span class="field">Tipo: piso, casa, apartamento, local</span>
+   <span class="field">Habitaciones</span>
+   <a class="btn" href="#venta">Buscar</a>
+  </form>
+ </div>
+</section>
+
+<section id="servicios">
+ <div class="wrap">
+  <h2 class="t">Todo lo que necesitas en un solo sitio</h2>
+  <p class="sub">Un equipo cercano que conoce la zona y se encarga de cada paso.</p>
+  <div class="svc">
+   <div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f4e79" stroke-width="2"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><h3>Compraventa</h3><p>Valoración, publicación, visitas y acompañamiento hasta notaría.</p></div>
+   <div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f4e79" stroke-width="2"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/></svg></span><h3>Alquiler</h3><p>Alquiler de larga temporada y vacacional, con contratos claros.</p></div>
+   <div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f4e79" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span><h3>Comunidades</h3><p>Administración de comunidades de vecinos con cuentas transparentes.</p></div>
+   <div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f4e79" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></span><h3>Seguros</h3><p>Seguros de hogar, alquiler y negocio adaptados a cada caso.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="venta" class="props">
+ <div class="wrap">
+  <h2 class="t">Inmuebles destacados</h2>
+  <p class="sub">Así se verían tus inmuebles: fotos grandes, datos clave a la vista y contacto en un toque desde el móvil.</p>
+  <div class="grid">
+   <article class="prop"><div class="ph a"><em>Ejemplo · Venta</em><svg viewBox="0 0 100 60"><path d="M10 60V28L50 6l40 22v32z" fill="#fff"/><rect x="42" y="38" width="16" height="22" fill="#1f4e79"/></svg></div><div class="b2"><h3>Piso cerca del paseo marítimo</h3><p>Vinaròs · Inmueble de ejemplo</p><div class="feat"><span>3 hab.</span><span>2 baños</span><span>Terraza</span></div></div></article>
+   <article class="prop"><div class="ph b"><em>Ejemplo · Alquiler</em><svg viewBox="0 0 100 60"><rect x="15" y="14" width="70" height="46" fill="#fff"/><rect x="25" y="24" width="14" height="12" fill="#2b7a9b"/><rect x="61" y="24" width="14" height="12" fill="#2b7a9b"/></svg></div><div class="b2"><h3>Apartamento junto a la playa</h3><p>Benicarló · Inmueble de ejemplo</p><div class="feat"><span>2 hab.</span><span>1 baño</span><span>Piscina</span></div></div></article>
+   <article class="prop"><div class="ph c"><em>Ejemplo · Venta</em><svg viewBox="0 0 100 60"><path d="M6 60V30L36 12l30 18v30z" fill="#fff"/><path d="M60 60V36l18-10 18 10v24z" fill="#f3ede2"/></svg></div><div class="b2"><h3>Casa con parcela</h3><p>Baix Maestrat · Inmueble de ejemplo</p><div class="feat"><span>4 hab.</span><span>Jardín</span><span>Garaje</span></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap why">
+  <div>
+   <h2 class="t">Por qué elegirnos</h2>
+   <ul>
+    <li>Conocemos Vinaròs, Benicarló y la comarca calle a calle</li>
+    <li>Un solo interlocutor durante toda la operación</li>
+    <li>Respuesta rápida por teléfono o WhatsApp</li>
+    <li>Servicio integral: venta, alquiler, comunidades y seguros</li>
+   </ul>
+  </div>
+  <div class="panel">
+   <h3>¿Quieres vender o alquilar tu vivienda?</h3>
+   <p>Cuéntanos qué tienes y te damos una valoración orientativa sin compromiso.</p>
+   <a class="btn" href="#contacto">Solicitar valoración</a>
+  </div>
+ </div>
+</section>
+
+<section id="contacto" class="contact">
+ <div class="wrap">
+  <div><h3>Oficina</h3><p>Vinaròs (Castellón)</p></div>
+  <div><h3>Teléfono</h3><p>[teléfono del negocio]</p></div>
+  <div><h3>Email</h3><p>[email del negocio]</p></div>
+ </div>
+</section>
+<a class="wa" href="#contacto">WhatsApp</a>
+<footer>Boceto de propuesta, no oficial · Preparado por Cristian Rico, diseño web en Peñíscola</footer>
+</body>
+</html>
