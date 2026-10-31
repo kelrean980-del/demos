@@ -22,11 +22,13 @@
  "@graph":[
   {"@type":"Person","@id":"https://kelrean980-del.github.io/demos/portfolio/#cristian",
    "name":"Cristian Rico","jobTitle":"Diseñador y desarrollador web freelance",
+   "email":"mailto:kerlean980@gmail.com","telephone":"+34633200860",
    "url":"https://kelrean980-del.github.io/demos/portfolio/",
    "address":{"@type":"PostalAddress","addressLocality":"Peñíscola","addressRegion":"Castellón","addressCountry":"ES"},
    "knowsAbout":["Diseño web","WordPress","HTML","CSS","Next.js","React","SEO on-page","Landing pages"]},
   {"@type":"ProfessionalService","@id":"https://kelrean980-del.github.io/demos/portfolio/#servicio",
    "name":"Cristian Rico - Diseño y desarrollo web",
+   "email":"mailto:kerlean980@gmail.com","telephone":"+34633200860",
    "url":"https://kelrean980-del.github.io/demos/portfolio/",
    "image":"https://kelrean980-del.github.io/demos/portfolio/img/og.png",
    "description":"Diseño y desarrollo de webs de negocio, landings, WordPress, HTML y Next.js con SEO on-page.",
@@ -91,7 +93,10 @@ h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.01em;margin-bottom:10px}
 .steps p{color:var(--muted);font-size:15px}
 .contact{background:var(--brand);color:#fff;border-radius:24px;padding:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
 .contact p{color:#cfe0dc}
-.placeholder{background:rgba(255,255,255,.08);border:1.5px dashed var(--acc);border-radius:14px;padding:20px;font-weight:600;color:var(--acc)}
+.clinks{display:flex;flex-direction:column;gap:12px}
+.cbtn{display:block;text-align:center;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);color:#fff;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.cbtn:hover{background:rgba(255,255,255,.18)}
+.cbtn.wa{background:#25d366;border-color:#25d366;color:#0b3d22}
 footer{padding:34px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (max-width:900px){
@@ -229,8 +234,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <h2>Hablemos de tu web</h2>
     <p>Cuéntame qué necesitas y te preparo un boceto y un presupuesto cerrado sin compromiso. Trabajo en Peñíscola, Benicarló, Vinaròs, el resto de Castellón y en remoto.</p>
    </div>
-   <!-- PENDIENTE CRISTIAN: sustituye el bloque de abajo por tu email y/o enlace de WhatsApp (https://wa.me/34XXXXXXXXX) -->
-   <div class="placeholder">Contacto: [añadir email/WhatsApp]</div>
+   <div class="clinks">
+    <a class="cbtn wa" href="https://wa.me/34633200860" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="cbtn" href="tel:+34633200860">Llamar: +34 633 200 860</a>
+    <a class="cbtn" href="mailto:kerlean980@gmail.com">kerlean980@gmail.com</a>
+   </div>
   </div>
  </div>
 </section>
