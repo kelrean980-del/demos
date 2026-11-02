@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Garita | Boceto de propuesta de portada (no oficial)</title>
+<meta name="description" content="Boceto de propuesta de portada para un hostal en Peñíscola. No es la web oficial del negocio.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--d:#3a2a1f;--m:#8a5a3b;--l:#4f8fa8;--sand:#f6f0e7;--acc:#b5543a;--ink:#1d232b;--mut:#5e6670;--line:#e4ded3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.ribbon{background:#fff4d6;color:#6b4a00;font-size:13px;text-align:center;padding:7px 12px;border-bottom:1px solid #f0dc9e}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.brand{font-weight:800;font-size:21px;color:var(--d)}
+.brand small{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--m)}
+.menu a{margin-left:22px;font-size:15px;color:var(--mut)}
+.menu a.btn{color:#fff}
+.btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:13px 22px;border-radius:10px}
+.btn.alt{background:transparent;border:1.5px solid #fff;color:#fff}
+.hero{position:relative;color:#fff;background:radial-gradient(900px 420px at 80% 0%,rgba(255,214,150,.45),transparent 60%),linear-gradient(170deg,var(--d) 0%,var(--m) 55%,var(--l) 100%);overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath d='M0 60 C240 20 480 90 720 55 C960 20 1200 80 1440 45 L1440 90 L0 90Z' fill='%23ffffff'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:120px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+.hero p{font-size:18px;color:rgba(255,255,255,.85);max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book{background:#fff;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.book h2{font-size:18px;margin-bottom:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:block;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:10px;font-size:15px;color:var(--mut);background:#fafafa}
+.book .btn{width:100%;text-align:center;margin-top:4px}
+.book small{display:block;margin-top:10px;color:var(--mut);font-size:13px}
+section{padding:64px 0}
+h2.t{font-size:clamp(26px,3.2vw,34px);color:var(--d);margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:30px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.ph{aspect-ratio:16/10;position:relative}
+.ph.a{background:linear-gradient(180deg,#9fd0e6 0 52%,#2f7fa3 52% 70%,#ead9bb 70% 100%)}
+.ph.b{background:linear-gradient(180deg,#f6c98f 0 50%,#d98a5a 50% 62%,#efe3cf 62% 100%)}
+.ph.c{background:linear-gradient(180deg,#c7dfe9 0 58%,#e8dcc6 58% 100%)}
+.ph svg{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);width:48%;opacity:.95}
+.ph em{position:absolute;top:12px;left:12px;font-style:normal;font-size:12px;font-weight:700;background:#fff;color:var(--d);padding:4px 10px;border-radius:999px}
+.card .b2{padding:16px 18px}
+.card h3{font-size:17px;color:var(--d)}
+.card p{font-size:14px;color:var(--mut)}
+.feat{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--mut);margin-top:10px}
+.alt-bg{background:var(--sand)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc div{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:12px}
+.svc h3{font-size:17px;margin-bottom:6px;color:var(--d)}
+.svc p{font-size:15px;color:var(--mut)}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.why ul{list-style:none}
+.why li{padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
+.why li::before{content:"";position:absolute;left:0;top:15px;width:20px;height:20px;border-radius:50%;background:var(--acc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.4' fill='none'/%3E%3C/svg%3E") center/14px no-repeat}
+.panel{background:var(--d);color:#fff;border-radius:20px;padding:32px}
+.panel h3{font-size:22px;margin-bottom:8px}
+.panel p{color:rgba(255,255,255,.8);margin-bottom:18px}
+.contact{background:var(--d);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;font-weight:700;padding:13px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.2);font-size:15px}
+footer{background:#111a22;color:#97a3ad;font-size:13px;padding:18px 0 70px;text-align:center}
+@media (max-width:900px){.hero .wrap,.why{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.contact .wrap{grid-template-columns:1fr}}
+@media (max-width:620px){.menu a:not(:last-child){display:none}.svc,.grid{grid-template-columns:1fr}.hero .wrap{padding-top:44px;padding-bottom:100px}section{padding:46px 0}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Boceto de propuesta, no oficial. Textos de ejemplo, sin fotos ni logotipo del negocio.</div>
+<header><div class="wrap nav"><a class="brand" href="#">La Garita<small>Hostal · Peñíscola</small></a><nav class="menu"><a href="#alojamiento">Habitaciones</a><a href="#zona">Peñíscola</a><a href="#contacto">Contacto</a><a class="btn" href="#reservar">Reservar</a></nav></div></header>
+<section class="hero"><div class="wrap"><div><h1>Habitaciones con vistas al mar en el corazón de Peñíscola</h1><p>Un hostal con carácter, a un paso del castillo y del mar. Elige tu habitación y reserva directa en pocos pasos.</p><div class="cta"><a class="btn" href="#reservar">Ver disponibilidad</a><a class="btn alt" href="#alojamiento">Habitaciones</a></div></div>
+<form class="book" id="reservar" onsubmit="return false" aria-label="Reserva de ejemplo"><h2>Reserva directa</h2><div class="row"><span class="field">Entrada</span><span class="field">Salida</span></div><span class="field">Huéspedes: 2 adultos</span><a class="btn" href="#contacto">Consultar precio</a><small>Ejemplo: aquí iría el motor de reservas que ya use el negocio.</small></form></div></section>
+<section id="alojamiento"><div class="wrap"><h2 class="t">Habitaciones</h2><p class="sub">Cada habitación con su nombre, fotos grandes y lo que la hace especial.</p><div class="grid"><article class="card"><div class="ph a"><em>Ejemplo</em><svg viewBox="0 0 100 60"><rect x="18" y="16" width="64" height="44" fill="#fff"/><rect x="26" y="24" width="14" height="12" fill="#2f7fa3"/><rect x="60" y="24" width="14" height="12" fill="#2f7fa3"/><rect x="43" y="40" width="14" height="20" fill="#c9773f"/></svg></div><div class="b2"><h3>Habitación Rey Lobo</h3><p>Texto de ejemplo: habitación con vistas al mar</p><div class="feat"><span>2 personas</span><span>Vistas al mar</span><span>Wifi</span></div></div></article><article class="card"><div class="ph b"><em>Ejemplo</em><svg viewBox="0 0 100 60"><path d="M10 60V26h80v34z" fill="#fff"/><rect x="18" y="34" width="30" height="14" rx="3" fill="#d98a5a"/><rect x="18" y="30" width="10" height="6" rx="2" fill="#efe3cf"/><rect x="58" y="32" width="24" height="18" fill="#9fd0e6"/></svg></div><div class="b2"><h3>Habitación con terraza</h3><p>Texto de ejemplo: terraza con vistas</p><div class="feat"><span>2 personas</span><span>Terraza</span><span>Aire acondicionado</span></div></div></article><article class="card"><div class="ph c"><em>Ejemplo</em><svg viewBox="0 0 100 60"><path d="M6 60V22h88v38z" fill="#fff"/><path d="M14 30h20v30H14zM40 30h20v30H40zM66 30h20v30H66z" fill="#c7dfe9"/><path d="M6 22l44-14 44 14z" fill="#e8dcc6"/></svg></div><div class="b2"><h3>Habitación Cine</h3><p>Texto de ejemplo para describir la habitación</p><div class="feat"><span>2 personas</span><span>Baño privado</span><span>Wifi</span></div></div></article></div></div></section>
+<section id="zona" class="alt-bg"><div class="wrap"><h2 class="t">Vivir el casco antiguo</h2><p class="sub">Información práctica para el huésped, sin widgets que fallen.</p><div class="svc"><div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a5a3b" stroke-width="2"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg></span><h3>Casco antiguo</h3><p>Calles con encanto y miradores al Mediterráneo.</p></div><div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a5a3b" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></span><h3>Castillo</h3><p>El castillo del Papa Luna, la visita imprescindible.</p></div><div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a5a3b" stroke-width="2"><path d="M2 18c3-3 5-3 8 0s5 3 8 0 4-2 4-2M2 13c3-3 5-3 8 0s5 3 8 0 4-2 4-2"/></svg></span><h3>El mar</h3><p>Vistas y playas a un paseo.</p></div><div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a5a3b" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Cómo llegar</h3><p>Mapa, aparcamiento cercano y acceso al casco antiguo.</p></div></div></div></section>
+<section><div class="wrap why"><div><h2 class="t">Por qué reservar directo</h2><ul><li>Mejor tarifa reservando en la web</li><li>Web en español, inglés y francés</li><li>Respuesta rápida por WhatsApp</li><li>Información clara antes de llegar</li></ul></div><div class="panel"><h3>Reserva tu escapada</h3><p>Escríbenos con tus fechas y te confirmamos disponibilidad.</p><a class="btn" href="#contacto">Escribir por WhatsApp</a></div></div></section>
+<section id="contacto" class="contact"><div class="wrap"><div><h3>Dirección</h3><p>Casco antiguo, Peñíscola (Castellón)</p></div><div><h3>Teléfono</h3><p>[teléfono del negocio]</p></div><div><h3>Email</h3><p>[email del negocio]</p></div></div></section>
+<a class="wa" href="#contacto">WhatsApp</a>
+<footer>Boceto de propuesta, no oficial · Preparado por Cristian Rico, diseño web en Peñíscola</footer>
+</body>
+</html>
