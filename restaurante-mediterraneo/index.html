@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa Olivera | Cocina mediterránea de mercado | Demo</title>
+<meta name="description" content="Boceto de portada para un pequeño restaurante en España: carta de temporada, reservas, horarios y ubicación.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6f0e6;--sand:#e9dcc6;--olive:#56603f;--olived:#3c4429;--terra:#b5643c;--ink:#2a2620;--muted:#6f675b;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+.demo{background:var(--ink);color:#cfc6b6;font-size:12px;text-align:center;padding:5px 10px;letter-spacing:.04em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(246,240,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:27px;font-weight:600;letter-spacing:.02em}
+.logo small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:-4px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--terra)}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;background:var(--terra);color:#fff;font-weight:600;font-size:14px;letter-spacing:.02em;transition:.2s}
+.btn:hover{background:#9a512d}
+.btn.ghost{background:transparent;border:1px solid currentColor;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.menu-t{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+/* hero */
+.hero{position:relative;min-height:84vh;display:grid;align-items:end;color:#fff;overflow:hidden;
+ background:linear-gradient(180deg,rgba(30,26,20,.15) 0%,rgba(30,26,20,.75) 100%),
+ radial-gradient(120% 80% at 80% 20%,#c98a5a 0%,#8c5a3a 35%,#4a3a28 70%,#2a241b 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 20% 70%,rgba(255,220,170,.25) 0 2px,transparent 3px) 0 0/38px 38px;opacity:.35}
+.hero .ph{position:absolute;top:18px;right:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.35);padding:5px 10px;border-radius:999px}
+.hero-in{position:relative;padding:0 0 70px}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#f3d9bf}
+.hero h1{font-size:clamp(44px,7vw,92px);max-width:13ch;margin:14px 0 18px}
+.hero h1 em{font-style:italic;color:#f3d9bf}
+.hero p{max-width:520px;font-size:17px;color:#efe6d8}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero .btn.ghost{color:#fff}
+.hero .btn.ghost:hover{background:#fff;color:var(--ink)}
+.facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;font-size:13px;color:#e8dccb}
+.facts b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;color:#fff;font-weight:600}
+/* sections */
+section{padding:96px 0}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:600}
+h2{font-size:clamp(34px,4.5vw,54px);margin:10px 0 18px}
+.lead{color:var(--muted);max-width:560px;font-size:16.5px}
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.imgph{border-radius:var(--r);aspect-ratio:4/5;position:relative;overflow:hidden;
+ background:linear-gradient(160deg,#cdb593,#8f7553 60%,#5c4b35)}
+.imgph span{position:absolute;left:14px;bottom:14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.3);padding:4px 10px;border-radius:999px}
+.imgph.b{background:linear-gradient(160deg,#9aa27c,#56603f 65%,#333a24)}
+.imgph.c{background:linear-gradient(160deg,#e0b48c,#b5643c 60%,#6d3a22)}
+.stack{position:relative}
+.stack .imgph.small{position:absolute;width:46%;aspect-ratio:1;right:-26px;bottom:-34px;border:8px solid var(--cream)}
+.sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;margin-top:22px;color:var(--olive)}
+/* menu */
+.menu{background:var(--olived);color:#efe9dc}
+.menu .kicker{color:#e2b18d}
+.menu .lead{color:#c9c3b2}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 34px}
+.tab{border:1px solid rgba(255,255,255,.3);padding:8px 18px;border-radius:999px;font-size:13px;cursor:pointer;background:none;color:inherit}
+.tab.on{background:#efe9dc;color:var(--olived);border-color:#efe9dc}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:6px 56px}
+.dish{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px dashed rgba(255,255,255,.2)}
+.dish h3{font-size:23px}
+.dish p{font-size:14px;color:#bfb8a6}
+.dish .pr{font-family:"Cormorant Garamond",serif;font-size:22px;white-space:nowrap;color:#f0c9a8}
+.note{margin-top:28px;font-size:13px;color:#b5ae9c}
+/* gallery */
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px;margin-top:40px}
+.gal .imgph{aspect-ratio:auto}
+.gal .imgph:first-child{grid-row:span 2}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.rev{background:#fff;border:1px solid var(--sand);border-radius:var(--r);padding:28px}
+.stars{color:var(--terra);letter-spacing:3px}
+.rev p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.35;margin:12px 0 16px}
+.rev small{color:var(--muted)}
+/* booking */
+.book{background:var(--sand)}
+.book-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.info{display:grid;gap:18px;margin-top:26px}
+.info div{background:var(--cream);border-radius:var(--r);padding:18px 20px}
+.info b{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:4px}
+form{background:#fff;border-radius:18px;padding:32px;box-shadow:0 20px 50px -30px rgba(60,40,20,.45)}
+form h3{font-size:30px;margin-bottom:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12px;color:var(--muted);margin:12px 0 5px;font-weight:500}
+input,select{width:100%;padding:12px 14px;border:1px solid #ddd2bf;border-radius:10px;font:inherit;background:#fdfbf7}
+form .btn{width:100%;margin-top:22px;border:0;cursor:pointer;font-size:15px}
+form small{display:block;text-align:center;color:var(--muted);margin-top:10px;font-size:12px}
+footer{background:var(--ink);color:#bdb4a4;padding:54px 0 30px;font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer .logo{color:#fff}
+footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+.copy{border-top:1px solid #3d382f;margin-top:40px;padding-top:20px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 25px -8px rgba(0,0,0,.4);z-index:20}
+.wa svg{width:28px;height:28px;fill:#fff}
+@media (max-width:900px){
+ nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px 22px;gap:16px;border-bottom:1px solid var(--sand)}
+ nav ul.open{display:flex}
+ .menu-t{display:block}
+ .nav .btn{display:none}
+ .about,.book-in{grid-template-columns:1fr;gap:44px}
+ .stack .imgph.small{right:10px}
+ .dishes{grid-template-columns:1fr}
+ .revs{grid-template-columns:1fr}
+ .gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+ .gal .imgph:first-child{grid-column:span 2;grid-row:auto}
+ .foot{grid-template-columns:1fr}
+ section{padding:72px 0}
+}
+@media (max-width:520px){.row{grid-template-columns:1fr}.facts{gap:22px}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto para la propuesta · nombre, textos e imágenes de ejemplo</div>
+<header>
+ <div class="wrap nav">
+  <a href="#" class="logo">Casa Olivera<small>Cocina de mercado</small></a>
+  <nav><ul id="m">
+   <li><a href="#casa">La casa</a></li><li><a href="#carta">Carta</a></li><li><a href="#galeria">Galería</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#reservas">Reservas</a></li>
+  </ul></nav>
+  <a href="#reservas" class="btn">Reservar mesa</a>
+  <button class="menu-t" aria-label="Menú" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+ </div>
+</header>
+
+<section class="hero" style="padding:0">
+ <span class="ph">Foto principal del restaurante</span>
+ <div class="wrap hero-in">
+  <div class="eyebrow">Restaurante · Desde 1998</div>
+  <h1>Cocina de siempre, <em>producto de hoy</em></h1>
+  <p>Un pequeño restaurante de pueblo con huerta propia, pescado de la lonja y recetas de la abuela hechas con calma.</p>
+  <div class="cta"><a href="#reservas" class="btn">Reservar mesa</a><a href="#carta" class="btn ghost">Ver la carta</a></div>
+  <div class="facts"><div><b>Km 0</b>Huerta y lonja cercanas</div><div><b>Terraza</b>Bajo los olivos</div><div><b>Mar–Dom</b>Comidas y cenas</div></div>
+ </div>
+</section>
+
+<section id="casa">
+ <div class="wrap about">
+  <div class="stack"><div class="imgph"><span>Sala / interior</span></div><div class="imgph small c"><span>Plato</span></div></div>
+  <div>
+   <div class="kicker">La casa</div>
+   <h2>Una mesa larga, el horno de leña y tiempo para comer</h2>
+   <p class="lead">Aquí va la historia del restaurante: quién cocina, de dónde viene el producto y qué hace especial este sitio. Texto corto, cercano y fácil de leer en el móvil.</p>
+   <p class="lead" style="margin-top:14px">Trabajamos con agricultores y pescadores de la zona y cambiamos la carta con cada temporada.</p>
+   <div class="sign">— La familia de Casa Olivera</div>
+  </div>
+ </div>
+</section>
+
+<section class="menu" id="carta">
+ <div class="wrap">
+  <div class="kicker">Carta de temporada</div>
+  <h2>Lo que hay hoy en la cocina</h2>
+  <p class="lead">Platos de ejemplo. La carta completa se puede actualizar fácilmente desde el panel o enlazar en PDF.</p>
+  <div class="tabs"><button class="tab on">Para compartir</button><button class="tab">Arroces</button><button class="tab">Del mar</button><button class="tab">Postres</button></div>
+  <div class="dishes">
+   <div class="dish"><div><h3>Pan de horno y aceite nuevo</h3><p>Pan de masa madre, aceite de la cosecha y sal en escamas</p></div><span class="pr">4,50</span></div>
+   <div class="dish"><div><h3>Tomate de la huerta</h3><p>Con ventresca, cebolla dulce y orégano</p></div><span class="pr">11</span></div>
+   <div class="dish"><div><h3>Croquetas de la casa</h3><p>Jamón y pollo de corral, seis unidades</p></div><span class="pr">9</span></div>
+   <div class="dish"><div><h3>Arroz meloso de temporada</h3><p>Mínimo dos personas, precio por persona</p></div><span class="pr">17</span></div>
+   <div class="dish"><div><h3>Pescado de lonja a la brasa</h3><p>Según mercado, con verduras asadas</p></div><span class="pr">S/M</span></div>
+   <div class="dish"><div><h3>Tarta de queso al horno</h3><p>Receta de la casa, cremosa por dentro</p></div><span class="pr">6,50</span></div>
+  </div>
+  <p class="note">Información sobre alérgenos disponible en sala. IVA incluido.</p>
+ </div>
+</section>
+
+<section id="galeria">
+ <div class="wrap">
+  <div class="kicker">Galería</div>
+  <h2>Un vistazo a la casa</h2>
+  <div class="gal">
+   <div class="imgph b"><span>Terraza</span></div>
+   <div class="imgph c"><span>Arroz</span></div>
+   <div class="imgph"><span>Barra</span></div>
+   <div class="imgph"><span>Cocina</span></div>
+   <div class="imgph b"><span>Huerta</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="opiniones" style="padding-top:0">
+ <div class="wrap">
+  <div class="kicker">Opiniones</div>
+  <h2>Lo que dicen quienes repiten</h2>
+  <div class="revs">
+   <div class="rev"><div class="stars">★★★★★</div><p>“Espacio para una reseña real de Google o TripAdvisor.”</p><small>Nombre del cliente · Google</small></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>“Aquí se muestran 3 opiniones destacadas, sin inventar ninguna.”</p><small>Nombre del cliente · TripAdvisor</small></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>“Bloque editable para añadir o cambiar reseñas cuando quieras.”</p><small>Nombre del cliente · Google</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="book" id="reservas">
+ <div class="wrap book-in">
+  <div>
+   <div class="kicker">Reservas</div>
+   <h2>Te guardamos la mesa</h2>
+   <p class="lead">Reserva en un minuto desde el móvil. Para grupos de más de 8 personas, llámanos.</p>
+   <div class="info">
+    <div><b>Horario</b>Martes a domingo · 13:00–16:00 y 20:00–23:00<br>Lunes cerrado</div>
+    <div><b>Dónde estamos</b>Calle de ejemplo, 12 · Tu pueblo (mapa de Google aquí)</div>
+    <div><b>Contacto</b>600 000 000 · hola@ejemplo.com</div>
+   </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('small').textContent='Demo: el formulario no envía datos.'">
+   <h3>Reservar mesa</h3>
+   <div class="row"><div><label>Fecha</label><input type="date"></div><div><label>Hora</label><select><option>13:30</option><option>14:00</option><option>14:30</option><option>20:30</option><option>21:00</option><option>21:30</option></select></div></div>
+   <div class="row"><div><label>Personas</label><select><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label>Zona</label><select><option>Sala</option><option>Terraza</option></select></div></div>
+   <label>Nombre</label><input placeholder="Tu nombre">
+   <label>Teléfono</label><input placeholder="600 000 000">
+   <button class="btn">Confirmar reserva</button>
+   <small>Recibirás la confirmación por email o WhatsApp.</small>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <div><div class="logo">Casa Olivera</div><p style="margin-top:12px;max-width:340px">Cocina mediterránea de mercado. Nombre y textos de ejemplo para el boceto.</p></div>
+   <div><h4>Visítanos</h4>Calle de ejemplo, 12<br>Tu pueblo, España</div>
+   <div><h4>Síguenos</h4>Instagram<br>Google Maps<br>TripAdvisor</div>
+  </div>
+  <div class="copy"><span>© 2026 Casa Olivera (ejemplo) · Aviso legal · Privacidad · Cookies</span><span>Demo / boceto para la propuesta</span></div>
+ </div>
+</footer>
+<a class="wa" href="#reservas" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a>
+<script>document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on')})</script>
+</body>
+</html>

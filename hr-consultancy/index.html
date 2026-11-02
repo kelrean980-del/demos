@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Northbridge HR | Custom HR systems for small companies | Demo</title>
+<meta name="description" content="Homepage mockup for a small HR systems consultancy: custom HR systems, monthly support and HR administration for small businesses.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--blue:#2b4c7e;--teal:#2a9d8f;--bg:#f7f8fb;--line:#e3e7ef;--t:#1c2333;--m:#5d677a;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--t);background:#fff;line-height:1.65}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;color:var(--navy)}
+.demo{background:var(--navy);color:#b8c2d6;font-size:12px;text-align:center;padding:5px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;color:var(--navy)}
+.logo i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--teal));display:inline-block}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14.5px;color:var(--m)}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14.5px;transition:.2s}
+.btn:hover{background:var(--navy)}
+.btn.out{background:#fff;color:var(--blue);border:1px solid var(--line)}
+.menu-t{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+.hero{background:radial-gradient(70% 90% at 90% 0%,#e4eefb 0%,transparent 60%),var(--bg);padding:90px 0 80px}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.tag{display:inline-block;background:#e6f4f2;color:#1f7a6f;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(36px,5vw,58px);margin:18px 0}
+.hero p{font-size:18px;color:var(--m);max-width:540px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 24px 50px -36px rgba(20,33,61,.5)}
+.card h3{font-size:19px;margin-bottom:14px}
+.check{list-style:none;display:grid;gap:12px;font-size:15px;color:var(--m)}
+.check li{display:flex;gap:10px}
+.check li::before{content:"";flex:0 0 18px;height:18px;margin-top:4px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/12px no-repeat}
+section{padding:90px 0}
+.k{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:600}
+h2{font-size:clamp(30px,3.6vw,42px);margin:10px 0 14px}
+.lead{color:var(--m);max-width:620px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.step{border-top:3px solid var(--blue);padding-top:20px}
+.step b{font-family:Fraunces,serif;font-size:34px;color:#c5d2e6}
+.step h3{font-size:21px;margin:6px 0}
+.step p{color:var(--m);font-size:15px}
+.svc{background:var(--bg)}
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.s{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.s .ic{width:44px;height:44px;border-radius:12px;background:#eaf0fa;display:grid;place-items:center;color:var(--blue);font-weight:700;margin-bottom:16px}
+.s h3{font-size:22px;margin-bottom:8px}
+.s p{color:var(--m);font-size:15px;flex:1}
+.s a{margin-top:18px;color:var(--blue);font-weight:600;font-size:14.5px}
+.systems{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.systems span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--navy)}
+.time{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:38px;counter-reset:n}
+.time div{background:var(--bg);border-radius:12px;padding:18px;font-size:14.5px;color:var(--m)}
+.time div::before{counter-increment:n;content:"Week " counter(n);display:block;font-weight:600;color:var(--blue);font-size:12.5px;margin-bottom:6px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ph{aspect-ratio:4/3;border-radius:var(--r);background:linear-gradient(140deg,#dbe5f3,#b9c9e2);display:grid;place-items:center;color:#5b6f92;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.trust{background:var(--navy);color:#c9d2e3;border-radius:var(--r);padding:30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.trust b{color:#fff}
+.testi{border:2px dashed var(--line);border-radius:var(--r);padding:30px;text-align:center;color:var(--m);margin-top:30px}
+.contact{background:var(--bg)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
+label{display:block;font-size:13px;color:var(--m);margin:12px 0 5px;font-weight:500}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+form .btn{border:0;width:100%;margin-top:20px;cursor:pointer;font-size:15px}
+.ci{display:grid;gap:14px;margin-top:24px;color:var(--m)}
+.ci b{display:block;color:var(--navy)}
+footer{background:var(--navy);color:#aeb9cf;padding:46px 0 26px;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .logo{color:#fff}
+.copy{border-top:1px solid #2a3858;margin-top:30px;padding-top:18px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){
+ nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 22px;border-bottom:1px solid var(--line)}
+ nav ul.open{display:flex}.menu-t{display:block}.nav .btn{display:none}
+ .hero-in,.split{grid-template-columns:1fr;gap:40px}
+ .steps,.svcs{grid-template-columns:1fr}
+ .time{grid-template-columns:1fr 1fr}
+ section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo / homepage mockup for the proposal · sample name and text</div>
+<header><div class="wrap nav">
+ <a href="#" class="logo"><i></i>Northbridge HR</a>
+ <nav><ul id="m"><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#about">About</a></li><li><a href="#resources">Resources</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+ <a href="#contact" class="btn">Contact us</a>
+ <button class="menu-t" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+</div></header>
+
+<section class="hero"><div class="wrap hero-in">
+ <div>
+  <span class="tag">HR systems for companies with 5 to 100 people</span>
+  <h1>HR that fits your company, built once and supported every month</h1>
+  <p>We design practical HR systems for small businesses, from hiring to onboarding to policies, then keep them running with monthly support.</p>
+  <div class="cta"><a href="#contact" class="btn">Contact us</a><a href="#how" class="btn out">See how it works</a></div>
+ </div>
+ <div class="card">
+  <h3>Who we help</h3>
+  <ul class="check">
+   <li>Founders doing HR on top of everything else</li>
+   <li>Growing teams that need clear processes</li>
+   <li>Companies without a full-time HR manager</li>
+   <li>Owners who want payroll and onboarding handled</li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+ <div class="k">How it works</div>
+ <h2>Three simple steps</h2>
+ <p class="lead">A clear process so you always know what happens next.</p>
+ <div class="steps">
+  <div class="step"><b>01</b><h3>Talk</h3><p>A free call to understand your team, your goals and what is not working today.</p></div>
+  <div class="step"><b>02</b><h3>Build</h3><p>We design and set up the HR system you need, documented and ready to use.</p></div>
+  <div class="step"><b>03</b><h3>Support</h3><p>Monthly support keeps the system up to date as your company grows.</p></div>
+ </div>
+ <div class="time"><div>Discovery and goals</div><div>Design of the system</div><div>Documents and tools</div><div>Team rollout</div><div>Review and handover</div></div>
+ <p class="lead" style="margin-top:14px;font-size:14px">Typical timeline: 4 to 8 weeks per system.</p>
+</div></section>
+
+<section class="svc" id="services"><div class="wrap">
+ <div class="k">Services</div>
+ <h2>What we do</h2>
+ <div class="svcs">
+  <div class="s"><div class="ic">1</div><h3>System Build</h3><p>A custom HR system for one area of your business, designed around how your team really works.</p><a href="#contact">Ask about a build &rarr;</a></div>
+  <div class="s"><div class="ic">2</div><h3>Monthly Support</h3><p>Ongoing help, updates and answers so your HR systems keep working month after month.</p><a href="#contact">Ask about support &rarr;</a></div>
+  <div class="s"><div class="ic">3</div><h3>HR Administration</h3><p>Optional add-on for payroll, onboarding and hiring support, handled for you.</p><a href="#contact">Ask about admin &rarr;</a></div>
+ </div>
+ <div class="systems"><span>Hiring</span><span>Onboarding</span><span>Job descriptions</span><span>Performance reviews</span><span>Policies and handbook</span><span>Time off</span><span>Compensation</span><span>Training</span><span>Offboarding</span><span>Compliance basics</span></div>
+ <div class="trust"><div><b>Human decisions only.</b> We do not use AI to screen or rank job candidates.</div></div>
+</div></section>
+
+<section id="about"><div class="wrap split">
+ <div class="ph">Founder photo</div>
+ <div>
+  <div class="k">About</div>
+  <h2>Experienced, practical and close to you</h2>
+  <p class="lead">Short founder bio goes here: background, credentials and why the consultancy exists. Written in a personal, credible tone.</p>
+  <div class="testi">Testimonials section, ready to edit. It stays hidden until real client reviews are added.</div>
+ </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap split" style="align-items:start">
+ <div>
+  <div class="k">Contact</div>
+  <h2>Tell us about your team</h2>
+  <p class="lead">Send a short message and we will reply within one business day.</p>
+  <div class="ci"><div><b>Office</b>123 Example Street, Chicago, IL</div><div><b>Phone</b>(000) 000-0000</div><div><b>Email</b>hello@example.com</div></div>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Demo: form not connected'">
+  <label>Name</label><input placeholder="Your name">
+  <label>Company</label><input placeholder="Company name">
+  <label>Email</label><input type="email" placeholder="you@company.com">
+  <label>Interested in</label><select><option>System Build</option><option>Monthly Support</option><option>HR Administration</option></select>
+  <label>Message</label><textarea placeholder="How many people, what you need..."></textarea>
+  <button class="btn">Send message</button>
+ </form>
+</div></section>
+
+<section id="resources" style="padding:60px 0"><div class="wrap"><div class="k">Resources</div><h2>Guides for small business HR</h2><p class="lead">Blog and guides section, ready for future articles.</p></div></section>
+
+<footer><div class="wrap">
+ <div class="foot"><div class="logo"><i></i>Northbridge HR</div><div>Services · How it works · About · Resources · Contact</div></div>
+ <div class="copy"><span>© 2026 Northbridge HR (sample) · Privacy policy · Terms</span><span>Demo / homepage mockup for the proposal</span></div>
+</div></footer>
+</body>
+</html>
