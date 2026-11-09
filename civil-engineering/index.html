@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Civil Engineering | Demo Homepage</title>
+<meta name="description" content="Homepage mockup for a civil engineering firm: structural design, site development and infrastructure. Request a site visit.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2238;--navy2:#16324f;--amber:#f2a516;--ink:#1d2733;--muted:#5d6b7a;--bg:#f5f7fa;--line:#e2e8ef}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.demo-banner{background:#fff4d6;color:#7a5600;font-size:13px;text-align:center;padding:6px 10px}
+header{position:sticky;top:0;z-index:10;background:rgba(15,34,56,.97);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;letter-spacing:.5px;font-size:19px;display:flex;align-items:center;gap:10px}
+.logo span{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--amber);color:var(--navy);border-radius:6px;font-size:16px}
+.links{display:flex;gap:26px;font-size:15px;opacity:.9}
+.btn{display:inline-block;background:var(--amber);color:var(--navy);font-weight:700;padding:12px 22px;border-radius:6px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(242,165,22,.35)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(15,34,56,.95) 0%,rgba(15,34,56,.78) 50%,rgba(15,34,56,.35) 100%),url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=70") center/cover}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;padding-top:90px;padding-bottom:90px;align-items:center}
+.eyebrow{color:var(--amber);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:13px}
+h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1;margin:14px 0 18px;font-weight:800}
+.hero p.lead{font-size:18px;opacity:.9;max-width:560px}
+.hero .ctas{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.form-card{background:#fff;color:var(--ink);border-radius:10px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.form-card h3{font-size:20px;margin-bottom:4px}
+.form-card p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.form-card label{display:block;font-size:13px;font-weight:600;margin:10px 0 4px}
+.form-card input,.form-card select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;font:inherit;font-size:15px}
+.form-card button{width:100%;margin-top:16px;border:0;cursor:pointer;font:inherit;font-size:16px}
+.trust{background:var(--navy2);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;text-align:center}
+.trust b{display:block;font-size:30px;color:var(--amber)}
+.trust small{opacity:.85}
+section{padding:80px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,3vw,38px);line-height:1.2;margin:8px 0 10px}
+.sec-head p{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{border:1px solid var(--line);border-radius:10px;padding:28px;transition:border-color .2s,box-shadow .2s}
+.svc:hover{border-color:var(--amber);box-shadow:0 12px 30px rgba(15,34,56,.08)}
+.svc .ic{width:48px;height:48px;border-radius:8px;background:#fff4d6;display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.svc h3{font-size:19px;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:15px}
+.projects{background:var(--bg)}
+.proj{border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(15,34,56,.06)}
+.proj img{width:100%;height:210px;object-fit:cover;display:block}
+.proj div{padding:18px 20px}
+.proj span{font-size:12px;font-weight:700;color:#b07500;text-transform:uppercase;letter-spacing:1px}
+.proj h3{font-size:17px;margin-top:4px}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about img{width:100%;border-radius:10px;height:380px;object-fit:cover}
+.values{list-style:none;margin-top:18px}
+.values li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line)}
+.values li:before{content:"✓";position:absolute;left:0;color:#b07500;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{padding:26px;border-left:4px solid var(--amber);background:var(--bg);border-radius:0 10px 10px 0}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:15px;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;text-align:center}
+.cta h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:12px}
+.cta p{opacity:.85;margin-bottom:26px}
+footer{background:#0a1828;color:#9fb0c2;font-size:14px;padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.links{display:none}.hero .wrap,.about .wrap{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}.trust .wrap{grid-template-columns:repeat(2,1fr)}section{padding:56px 0}.hero .wrap{padding-top:50px;padding-bottom:50px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">Demo / boceto para la propuesta. Sample name, texts and images only.</div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><span>M</span>MERIDIAN CIVIL</a>
+  <nav class="links"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#process">Process</a></nav>
+  <a class="btn" href="#visit">Request a Site Visit</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Civil &amp; structural engineering</div>
+    <h1>Engineering you can build on, from survey to sign-off.</h1>
+    <p class="lead">Site development, structural design and infrastructure for developers, contractors and public clients. Tell us about your site and an engineer will visit within 5 working days.</p>
+    <div class="ctas"><a class="btn" href="#visit">Request a Site Visit</a><a class="btn ghost" href="#projects">See our projects</a></div>
+  </div>
+  <form class="form-card" id="visit" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! (demo form)';">
+    <h3>Request a site visit</h3>
+    <p>Takes 1 minute. We reply within one business day.</p>
+    <label for="n">Name</label><input id="n" required placeholder="Your name">
+    <label for="e">Email or phone</label><input id="e" required placeholder="name@company.com">
+    <label for="t">Project type</label>
+    <select id="t"><option>Site development</option><option>Structural design</option><option>Roads &amp; drainage</option><option>Inspection / assessment</option></select>
+    <label for="d">Preferred date</label><input id="d" type="date">
+    <button class="btn" type="submit">Book my site visit</button>
+  </form>
+</div></section>
+
+<div class="trust"><div class="wrap">
+  <div><b>25+</b><small>years in practice</small></div>
+  <div><b>400+</b><small>projects delivered</small></div>
+  <div><b>5 days</b><small>to your site visit</small></div>
+  <div><b>100%</b><small>licensed engineers</small></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">What we do</div><h2>Services for every stage of your project</h2><p>Clear scopes, fixed milestones and drawings your contractor can actually build from.</p></div>
+  <div class="grid3">
+    <div class="svc"><div class="ic">📐</div><h3>Structural design</h3><p>Foundations, steel and concrete design for residential, commercial and industrial buildings.</p></div>
+    <div class="svc"><div class="ic">🏗️</div><h3>Site development</h3><p>Grading, earthworks, utilities and permitting so your site is ready to build.</p></div>
+    <div class="svc"><div class="ic">🛣️</div><h3>Roads &amp; drainage</h3><p>Access roads, parking, stormwater management and drainage design.</p></div>
+  </div>
+</div></section>
+
+<section class="projects" id="projects"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Recent work</div><h2>Projects we are proud of</h2></div>
+  <div class="grid3">
+    <div class="proj"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=60" alt="Building under construction"><div><span>Commercial</span><h3>Mixed-use building, 6 floors</h3></div></div>
+    <div class="proj"><img loading="lazy" src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?auto=format&fit=crop&w=800&q=60" alt="Bridge structure"><div><span>Infrastructure</span><h3>Pedestrian bridge retrofit</h3></div></div>
+    <div class="proj"><img loading="lazy" src="https://images.unsplash.com/photo-1590644365607-1c5a0a4d2d43?auto=format&fit=crop&w=800&q=60" alt="Earthworks on a site"><div><span>Site development</span><h3>Residential subdivision, 48 lots</h3></div></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=60" alt="Engineers reviewing plans on site">
+  <div>
+    <div class="eyebrow">Our story</div>
+    <h2 style="font-size:clamp(28px,3vw,36px);margin:8px 0 12px">A family firm built on straight answers</h2>
+    <p style="color:var(--muted)">Founded by two engineers who wanted clients to understand every decision, we still work the same way: one point of contact, honest timelines and drawings checked twice.</p>
+    <ul class="values"><li>Safety first, on every site</li><li>Transparent fees and milestones</li><li>Engineers on site, not just in the office</li></ul>
+  </div>
+</div></section>
+
+<section id="process" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">How it works</div><h2>From first call to approved plans</h2></div>
+  <div class="steps">
+    <div class="step"><h3>1. Request a visit</h3><p>Send the form. We confirm a date that suits you.</p></div>
+    <div class="step"><h3>2. Site assessment</h3><p>An engineer walks the site and reviews your goals.</p></div>
+    <div class="step"><h3>3. Proposal &amp; design</h3><p>Clear scope, fixed fee and a realistic schedule.</p></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Have a site in mind?</h2>
+  <p>Book a free site visit and get a clear plan for your project.</p>
+  <a class="btn" href="#visit">Request a Site Visit</a>
+</div></section>
+
+<footer><div class="wrap"><span>© Meridian Civil Engineering (sample name). Demo homepage.</span><span>Mockup by Cristian Rico</span></div></footer>
+</body>
+</html>
