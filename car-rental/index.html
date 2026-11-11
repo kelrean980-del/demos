@@ -11,12 +11,12 @@
 <style>
 :root{--ink:#0f172a;--navy:#111c33;--accent:#f59e0b;--soft:#f5f7fb;--muted:#5b6475}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+html,body{overflow-x:hidden}body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
 .ribbon{background:#000;color:#cbd5e1;font-size:.78rem;text-align:center;padding:6px}
 header{position:absolute;left:0;right:0;z-index:5}
-.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;color:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;color:#fff}
 .logo{font-family:Outfit;font-weight:800;font-size:1.4rem;letter-spacing:.02em}.logo em{color:var(--accent);font-style:normal}
 nav{display:flex;gap:26px;font-weight:500;opacity:.9}
 .cta{background:var(--accent);color:#111;padding:10px 20px;border-radius:10px;font-weight:700}
@@ -47,7 +47,7 @@ h2{font-family:Outfit;font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:10px}
 .band h2{margin:0}
 footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.88rem}
 @media(max-width:900px){nav{display:none}.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.fleet{grid-template-columns:1fr}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.band{padding:28px}}
+@media(max-width:520px){.logo{font-size:1.1rem}.cta{padding:8px 12px;font-size:.85rem}.stats{gap:22px}.grid{grid-template-columns:1fr}.band{padding:28px}}
 </style>
 </head>
 <body>
