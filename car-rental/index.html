@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Rental | Homepage mockup</title>
+<meta name="description" content="Homepage mockup for a car rental business: about, services, fleet highlights and contact.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f172a;--navy:#111c33;--accent:#f59e0b;--soft:#f5f7fb;--muted:#5b6475}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.ribbon{background:#000;color:#cbd5e1;font-size:.78rem;text-align:center;padding:6px}
+header{position:absolute;left:0;right:0;z-index:5}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;color:#fff}
+.logo{font-family:Outfit;font-weight:800;font-size:1.4rem;letter-spacing:.02em}.logo em{color:var(--accent);font-style:normal}
+nav{display:flex;gap:26px;font-weight:500;opacity:.9}
+.cta{background:var(--accent);color:#111;padding:10px 20px;border-radius:10px;font-weight:700}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(10,16,30,.92),rgba(10,16,30,.35)),url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1600&q=70') center/cover}
+.hero h1{font-family:Outfit;font-size:clamp(2.3rem,5.5vw,4rem);line-height:1.05;max-width:12em;margin-bottom:18px}
+.hero h1 span{color:var(--accent)}
+.hero p{max-width:34em;font-size:1.1rem;opacity:.9;margin-bottom:28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:10px;font-weight:700}.btn.p{background:var(--accent);color:#111}.btn.g{border:1px solid rgba(255,255,255,.5)}
+.stats{display:flex;gap:36px;margin-top:40px;flex-wrap:wrap}.stats b{display:block;font-family:Outfit;font-size:1.7rem;color:var(--accent)}
+section{padding:80px 0}
+h2{font-family:Outfit;font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:10px}
+.sub{color:var(--muted);max-width:38em;margin-bottom:40px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about img{width:100%;border-radius:20px;aspect-ratio:4/3;object-fit:cover}
+.checks{list-style:none;margin-top:18px}.checks li{padding:6px 0 6px 30px;position:relative}.checks li:before{content:"";position:absolute;left:0;top:13px;width:16px;height:16px;border-radius:4px;background:var(--accent)}
+.svc{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 6px 20px rgba(15,23,42,.05)}
+.card i{font-style:normal;font-size:1.7rem;display:block;margin-bottom:10px}
+.card h3{font-family:Outfit;margin-bottom:6px}.card p{color:var(--muted);font-size:.95rem}
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.car{border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;transition:.2s}.car:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.car img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#ddd}
+.car div{padding:18px 20px}.car h3{font-family:Outfit}.car small{color:var(--muted)}
+.tags{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.tags span{background:var(--soft);padding:4px 10px;border-radius:999px;font-size:.8rem}
+.band{background:var(--navy);color:#fff;border-radius:24px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{margin:0}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.88rem}
+@media(max-width:900px){nav{display:none}.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.fleet{grid-template-columns:1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.band{padding:28px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Demo / homepage mockup for the proposal: sample name, copy and free stock images</div>
+<header><div class="wrap top"><a class="logo" href="#">DRIVE<em>WAY</em> Rentals</a><nav><a href="#about">About</a><a href="#services">Services</a><a href="#fleet">Fleet</a><a href="#contact">Contact</a></nav><a class="cta" href="#contact">Get a quote</a></div></header>
+<section class="hero"><div class="wrap">
+<h1>Reliable cars for <span>every trip</span>, without the hassle</h1>
+<p>Clean, well-maintained vehicles, honest prices and friendly local service. Daily, weekly and monthly rentals for locals and visitors.</p>
+<div class="btns"><a class="btn p" href="#fleet">See our fleet</a><a class="btn g" href="#contact">Contact us</a></div>
+<div class="stats"><div><b>3</b>vehicle classes</div><div><b>24/7</b>roadside support</div><div><b>0</b>hidden fees</div></div>
+</div></section>
+<section id="about"><div class="wrap about">
+<div><h2>About us</h2><p class="sub" style="margin-bottom:0">We are a new local rental company built around one idea: renting a car should be simple. Clear terms, fast pick-up and vehicles you can trust.</p>
+<ul class="checks"><li>Fully insured, regularly serviced vehicles</li><li>Transparent pricing, deposit explained up front</li><li>Flexible pick-up and drop-off</li></ul></div>
+<img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=70" alt="Car on an open road" loading="lazy">
+</div></section>
+<section class="svc" id="services"><div class="wrap">
+<h2>Rental options</h2><p class="sub">Pick what fits your plans. Every rental includes basic insurance and support.</p>
+<div class="grid">
+<div class="card"><i>📅</i><h3>Daily rentals</h3><p>Perfect for errands, day trips and quick getaways.</p></div>
+<div class="card"><i>🗓️</i><h3>Weekly & monthly</h3><p>Lower rates for longer stays and work projects.</p></div>
+<div class="card"><i>✈️</i><h3>Airport delivery</h3><p>We meet you at arrivals with the car ready.</p></div>
+<div class="card"><i>💼</i><h3>Business accounts</h3><p>Simple invoicing for companies and teams.</p></div>
+</div></div></section>
+<section id="fleet"><div class="wrap">
+<h2>Fleet highlights</h2><p class="sub">A small, carefully chosen fleet. Easy to update from the CMS as new cars arrive.</p>
+<div class="fleet">
+<div class="car"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=70" alt="Compact car" loading="lazy"><div><h3>Economy</h3><small>Great on fuel, easy to park</small><div class="tags"><span>5 seats</span><span>Automatic</span><span>A/C</span></div></div></div>
+<div class="car"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=70" alt="SUV" loading="lazy"><div><h3>SUV</h3><small>Space for family and luggage</small><div class="tags"><span>7 seats</span><span>AWD</span><span>Bluetooth</span></div></div></div>
+<div class="car"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=70" alt="Premium car" loading="lazy"><div><h3>Premium</h3><small>For special occasions and business</small><div class="tags"><span>Leather</span><span>GPS</span><span>Comfort</span></div></div></div>
+</div></div></section>
+<section id="contact"><div class="wrap"><div class="band"><div><h2>Ready to hit the road?</h2><p style="opacity:.85">Call, message or email us and we will confirm availability fast.</p></div><a class="btn p" href="#">Contact us today</a></div></div></section>
+<footer>Homepage mockup prepared for the proposal · Images: Unsplash</footer>
+</body></html>

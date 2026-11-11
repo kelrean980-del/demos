@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuidado de personas mayores a domicilio | Boceto de portada</title>
+<meta name="description" content="Boceto de portada para un servicio de cuidado de personas mayores: confianza, cercanía y contacto fácil para las familias.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf8f3;--sage:#5f8b72;--deep:#2f4a3c;--peach:#f2c7a5;--sun:#f5e3c3;--ink:#2d2a26;--muted:#6b665e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:17px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.ribbon{background:var(--deep);color:#e9f1ec;font-size:.8rem;text-align:center;padding:6px}
+header{position:sticky;top:0;z-index:10;background:rgba(251,248,243,.95);backdrop-filter:blur(6px);border-bottom:1px solid #ece4d8}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.logo{font-family:Lora,serif;font-weight:700;font-size:1.35rem;color:var(--deep);display:flex;align-items:center;gap:10px}
+.logo span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--sage);color:#fff;font-size:1.1rem}
+nav{display:flex;gap:22px;font-weight:600;color:var(--muted)}
+nav a:hover{color:var(--deep)}
+.call{background:var(--sage);color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;white-space:nowrap}
+.call:hover{background:var(--deep)}
+.hero{padding:70px 0 60px;background:radial-gradient(circle at 85% 20%,var(--sun),transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.kicker{display:inline-block;background:#e6efe9;color:var(--deep);font-weight:700;font-size:.85rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-family:Lora,serif;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.15;color:var(--deep);margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.12rem;max-width:34em;margin-bottom:28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:999px;font-weight:700}
+.btn.main{background:var(--sage);color:#fff;box-shadow:0 8px 20px rgba(95,139,114,.3)}
+.btn.alt{border:2px solid var(--sage);color:var(--deep)}
+.trust{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+.trust b{display:block;color:var(--deep);font-size:1.4rem;font-family:Lora,serif}
+.photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:#ddd url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=900&q=70') center/cover;box-shadow:0 20px 50px rgba(47,74,60,.18)}
+.badge{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(255,255,255,.95);border-radius:18px;padding:14px 16px;font-size:.92rem}
+.badge b{color:var(--deep)}
+section{padding:70px 0}
+h2{font-family:Lora,serif;color:var(--deep);font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px;text-align:center}
+.sub{text-align:center;color:var(--muted);max-width:36em;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:22px;padding:28px;border:1px solid #efe7db;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--sun);font-size:1.5rem;margin-bottom:14px}
+.card h3{font-family:Lora,serif;color:var(--deep);margin-bottom:6px}
+.card p{color:var(--muted);font-size:.98rem}
+.about{background:#eef3ef}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.about h2{text-align:left}
+.about ul{list-style:none;margin-top:16px}
+.about li{padding:8px 0 8px 34px;position:relative}
+.about li:before{content:"✓";position:absolute;left:0;top:7px;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;font-size:.8rem}
+.quote{background:#fff;border-radius:22px;padding:30px;font-family:Lora,serif;font-size:1.15rem;color:var(--deep);box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.quote small{display:block;margin-top:12px;font-family:Nunito,sans-serif;color:var(--muted);font-size:.9rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.steps div{background:#fff;border-radius:22px;padding:26px;border:1px solid #efe7db}
+.steps div:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--peach);color:var(--deep);font-weight:700;margin-bottom:12px}
+.contact{background:var(--deep);color:#eef4f0;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.contact h2{color:#fff;text-align:left}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:13px 15px;border-radius:12px;border:0;font:inherit}
+form button{background:var(--peach);color:var(--deep);border:0;padding:14px;border-radius:999px;font-weight:700;font-size:1rem;cursor:pointer}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.9rem}
+.wa{position:fixed;right:18px;bottom:18px;background:#25a35a;color:#fff;padding:13px 18px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+@media(max-width:860px){nav{display:none}.hero .wrap,.about .wrap,.contact{grid-template-columns:1fr}.grid,.steps{grid-template-columns:1fr}.photo{aspect-ratio:4/3}.contact{padding:28px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Demo / boceto para la propuesta: nombre, textos e imágenes de ejemplo</div>
+<header><div class="wrap top">
+<a class="logo" href="#"><span>♥</span>Cuidar en Casa</a>
+<nav><a href="#servicios">Servicios</a><a href="#nosotros">Quiénes somos</a><a href="#como">Cómo funciona</a><a href="#contacto">Contacto</a></nav>
+<a class="call" href="#contacto">Llámanos</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<div>
+<span class="kicker">Cuidado de personas mayores a domicilio</span>
+<h1>Cuidamos de los tuyos como si fueran de nuestra familia</h1>
+<p class="lead">Cuidadoras de confianza, acompañamiento y ayuda en el día a día para que tus mayores sigan en casa, tranquilos y bien atendidos. Y tú, con la tranquilidad de saberlo.</p>
+<div class="btns"><a class="btn main" href="#contacto">Pide información sin compromiso</a><a class="btn alt" href="#servicios">Ver servicios</a></div>
+<div class="trust"><div><b>24 h</b>respuesta a tu consulta</div><div><b>Plan</b>adaptado a cada persona</div><div><b>Cerca</b>trato humano y cercano</div></div>
+</div>
+<div class="photo" role="img" aria-label="Cuidadora acompañando a una persona mayor"><div class="badge"><b>Primera visita gratuita</b><br>Conocemos a tu familiar y preparamos un plan a su medida.</div></div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+<h2>Nuestros servicios</h2>
+<p class="sub">Elegimos juntos la ayuda que necesita tu familiar, por horas, por días o como interna.</p>
+<div class="grid">
+<div class="card"><div class="ico">🏠</div><h3>Ayuda en casa</h3><p>Higiene personal, comidas, medicación y tareas del hogar con cariño y respeto.</p></div>
+<div class="card"><div class="ico">🤝</div><h3>Compañía</h3><p>Paseos, conversación, gestiones y citas médicas para que nunca se sienta solo.</p></div>
+<div class="card"><div class="ico">🌙</div><h3>Noches e internas</h3><p>Atención continua y descanso para la familia, con cuidadoras seleccionadas.</p></div>
+<div class="card"><div class="ico">🩺</div><h3>Apoyo tras hospital</h3><p>Acompañamiento en la recuperación tras una operación o un ingreso.</p></div>
+<div class="card"><div class="ico">🧠</div><h3>Alzheimer y demencias</h3><p>Rutinas, estimulación y paciencia de personas con experiencia en estos casos.</p></div>
+<div class="card"><div class="ico">📋</div><h3>Seguimiento a la familia</h3><p>Te contamos cómo va todo y ajustamos el plan cuando haga falta.</p></div>
+</div></div></section>
+
+<section class="about" id="nosotros"><div class="wrap">
+<div><h2>Quiénes somos</h2>
+<p>Somos un equipo pequeño y cercano. Sabemos lo difícil que es dejar a un padre o una madre en otras manos, por eso cuidamos cada detalle desde el primer día.</p>
+<ul><li>Cuidadoras entrevistadas y con referencias</li><li>Una persona de contacto fija para la familia</li><li>Sustituciones sin que tengas que preocuparte</li></ul></div>
+<div class="quote">"Mi madre está encantada y nosotros por fin dormimos tranquilos."<small>Testimonio de ejemplo</small></div>
+</div></section>
+
+<section id="como"><div class="wrap">
+<h2>Cómo funciona</h2><p class="sub">Tres pasos sencillos, sin papeleo complicado.</p>
+<div class="steps"><div><h3>Nos llamas o escribes</h3><p>Nos cuentas la situación y resolvemos tus dudas.</p></div><div><h3>Visita y plan</h3><p>Conocemos a tu familiar y proponemos horario y cuidadora.</p></div><div><h3>Empezamos</h3><p>La cuidadora empieza y te damos seguimiento cercano.</p></div></div>
+</div></section>
+
+<section id="contacto"><div class="wrap"><div class="contact">
+<div><h2>Hablemos</h2><p>Déjanos tus datos y te llamamos en menos de 24 horas. Sin compromiso.</p><p style="margin-top:18px">📞 600 000 000<br>✉️ hola@ejemplo.com</p></div>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Gracias, te llamamos pronto'"><input placeholder="Tu nombre" required><input type="tel" placeholder="Teléfono" required><select><option>Ayuda por horas</option><option>Compañía</option><option>Interna / noches</option><option>No lo sé aún</option></select><textarea rows="3" placeholder="Cuéntanos brevemente la situación"></textarea><button>Quiero que me llaméis</button></form>
+</div></div></section>
+<footer>Boceto de portada preparado para la propuesta · Imágenes de Unsplash</footer>
+<a class="wa" href="#contacto">WhatsApp</a>
+</body></html>
