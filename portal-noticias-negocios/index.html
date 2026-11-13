@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal de noticias de negocios digitales | Boceto de portada</title>
+<meta name="description" content="Boceto de portada para un portal de noticias en español sobre negocios online, comercio electrónico, marketing, IA y emprendimiento.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14171f;--muted:#5d6472;--line:#e4e6eb;--bg:#fafaf7;--accent:#e2482d;--accent2:#1f5eff;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.demo-bar{background:#14171f;color:#c9ccd3;font-size:12px;text-align:center;padding:6px}
+.topline{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:Merriweather,serif;font-weight:900;font-size:34px;letter-spacing:-.5px}
+.logo span{color:var(--accent)}
+.tag{font-size:13px;color:var(--muted)}
+.search{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font:inherit;width:220px;background:#fff}
+nav.cats{border-top:3px solid var(--ink);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+nav.cats ul{display:flex;gap:26px;list-style:none;overflow-x:auto;padding:12px 0;font-weight:600;font-size:14px;white-space:nowrap}
+nav.cats a:hover{color:var(--accent)}
+.ticker{display:flex;gap:12px;align-items:center;font-size:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ticker b{background:var(--accent);color:#fff;font-size:11px;letter-spacing:.08em;padding:3px 8px;border-radius:3px}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:28px;padding:28px 0}
+.lead .img{aspect-ratio:16/9;border-radius:6px;background:linear-gradient(135deg,#1f5eff 0%,#7a3cff 55%,#e2482d 100%);position:relative;overflow:hidden}
+.lead .img:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.08) 0 2px,transparent 2px 60px)}
+.kicker{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 6px}
+h1,h2,h3{font-family:Merriweather,serif;line-height:1.25}
+.lead h1{font-size:32px}
+.lead p{color:var(--muted);margin-top:10px;font-size:17px}
+.meta{font-size:12.5px;color:var(--muted);margin-top:10px}
+.side article{padding:14px 0;border-bottom:1px solid var(--line)}
+.side article:first-child{padding-top:0}
+.side h3{font-size:17px}
+.ad{border:1px dashed #c8ccd4;color:#9aa0ab;font-size:12px;text-align:center;padding:22px;border-radius:6px;margin:6px 0 20px;background:#fff}
+.section-title{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:8px;margin:18px 0 18px}
+.section-title h2{font-size:22px}
+.section-title a{font-size:13px;color:var(--accent2);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card .thumb{aspect-ratio:4/3;border-radius:6px;margin-bottom:10px}
+.t1{background:linear-gradient(135deg,#ffb347,#e2482d)}.t2{background:linear-gradient(135deg,#43cea2,#185a9d)}
+.t3{background:linear-gradient(135deg,#7a3cff,#1f5eff)}.t4{background:linear-gradient(135deg,#232526,#5d6472)}
+.card h3{font-size:16px}
+.two{display:grid;grid-template-columns:2fr 1fr;gap:28px;margin-top:30px}
+.list article{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.list .thumb{aspect-ratio:4/3;border-radius:6px}
+.list h3{font-size:18px}
+.box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:20px}
+.box h3{font-size:17px;margin-bottom:10px}
+.box ol{padding-left:18px;font-size:14.5px}.box li{margin:8px 0}
+.news input{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font:inherit;margin:10px 0}
+.btn{display:inline-block;width:100%;text-align:center;background:var(--accent);color:#fff;font-weight:600;padding:11px;border-radius:6px;border:0;font:inherit;cursor:pointer}
+.trust{font-size:13.5px;color:var(--muted)}
+footer{background:#14171f;color:#c9ccd3;margin-top:44px;padding:36px 0;font-size:14px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;margin-bottom:10px}
+footer li{list-style:none;margin:6px 0}
+.small{font-size:12px;color:#8a8f99;margin-top:22px}
+@media (max-width:900px){.hero,.two{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.search,.tag{display:none}.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.grid{grid-template-columns:1fr}.lead h1{font-size:25px}.logo{font-size:27px}.list article{grid-template-columns:100px 1fr}.fgrid{grid-template-columns:1fr}.topline span:last-child{display:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Demo / boceto para la propuesta: contenidos de ejemplo</div>
+<header class="wrap">
+  <div class="topline"><span>Viernes, 13 de noviembre</span><span>Negocios digitales para Argentina y Latinoamérica</span></div>
+  <div class="brand"><div><a class="logo" href="#">Portal<span>.</span>Negocios</a><div class="tag">Noticias, guías y análisis para emprender online</div></div><input class="search" type="search" placeholder="Buscar noticias..." aria-label="Buscar"></div>
+</header>
+<nav class="cats"><div class="wrap"><ul>
+  <li><a href="#">Actualidad</a></li><li><a href="#">Comercio electrónico</a></li><li><a href="#">Marketing y redes</a></li><li><a href="#">IA y tecnología</a></li><li><a href="#">Emprendimiento</a></li><li><a href="#">Guías y análisis</a></li>
+</ul></div></nav>
+<main class="wrap">
+  <div class="ticker"><b>ÚLTIMO</b><span>Ejemplo: así se verían los titulares más recientes en una franja destacada</span></div>
+  <section class="hero">
+    <article class="lead">
+      <div class="img" role="img" aria-label="Imagen de la noticia principal"></div>
+      <div class="kicker">Comercio electrónico</div>
+      <h1><a href="#">Titular de ejemplo: qué cambia para las tiendas online pequeñas en la próxima temporada de ventas</a></h1>
+      <p>Bajada de la noticia principal con el resumen en dos líneas, pensada para que el lector entienda el tema antes de entrar.</p>
+      <div class="meta">Por Redacción · 13 nov · 5 min de lectura · Fuentes citadas</div>
+    </article>
+    <aside class="side">
+      <article><div class="kicker">IA y tecnología</div><h3><a href="#">Herramientas de IA que una pyme puede probar esta semana sin programar</a></h3><div class="meta">Por Autor/a · 12 nov</div></article>
+      <article><div class="kicker">Marketing</div><h3><a href="#">Guía rápida para medir si tus redes sociales traen clientes de verdad</a></h3><div class="meta">Por Autor/a · 12 nov</div></article>
+      <article><div class="kicker">Emprendimiento</div><h3><a href="#">Caso de negocio: de un emprendimiento casero a vender en toda la región</a></h3><div class="meta">Por Autor/a · 11 nov</div></article>
+      <div class="ad" style="margin-top:16px">Espacio publicitario (300×250) preparado para AdSense</div>
+    </aside>
+  </section>
+
+  <div class="section-title"><h2>Lo último</h2><a href="#">Ver todas</a></div>
+  <section class="grid">
+    <article class="card"><div class="thumb t1"></div><div class="kicker">Actualidad</div><h3><a href="#">Titular de ejemplo sobre un cambio en pagos digitales</a></h3><div class="meta">13 nov</div></article>
+    <article class="card"><div class="thumb t2"></div><div class="kicker">Comercio electrónico</div><h3><a href="#">Cómo elegir plataforma para tu primera tienda online</a></h3><div class="meta">13 nov</div></article>
+    <article class="card"><div class="thumb t3"></div><div class="kicker">IA y tecnología</div><h3><a href="#">Qué es un agente de IA y para qué le sirve a un negocio</a></h3><div class="meta">12 nov</div></article>
+    <article class="card"><div class="thumb t4"></div><div class="kicker">Guías</div><h3><a href="#">Checklist legal básico antes de vender por internet</a></h3><div class="meta">12 nov</div></article>
+  </section>
+
+  <div class="ad" style="margin-top:28px">Espacio publicitario horizontal (728×90), sin cortar la lectura</div>
+
+  <section class="two">
+    <div>
+      <div class="section-title"><h2>Guías prácticas y análisis</h2><a href="#">Más guías</a></div>
+      <div class="list">
+        <article><div class="thumb t2"></div><div><div class="kicker">Guía</div><h3><a href="#">Paso a paso para posicionar tu web en Google sin presupuesto</a></h3><div class="meta">Por Autor/a · 10 nov · Fuentes al final</div></div></article>
+        <article><div class="thumb t1"></div><div><div class="kicker">Análisis</div><h3><a href="#">Tendencias del comercio electrónico en Latinoamérica explicadas sin humo</a></h3><div class="meta">Por Autor/a · 9 nov</div></div></article>
+        <article><div class="thumb t3"></div><div><div class="kicker">Marketing</div><h3><a href="#">Email marketing para pymes: lo mínimo que funciona</a></h3><div class="meta">Por Autor/a · 8 nov</div></div></article>
+      </div>
+    </div>
+    <aside>
+      <div class="box"><h3>Más leídas</h3><ol><li><a href="#">Titular de ejemplo más leído número uno</a></li><li><a href="#">Titular de ejemplo más leído número dos</a></li><li><a href="#">Titular de ejemplo más leído número tres</a></li><li><a href="#">Titular de ejemplo más leído número cuatro</a></li></ol></div>
+      <div class="box news"><h3>Boletín semanal</h3><p class="trust">Las noticias clave de negocios digitales, cada lunes en tu correo.</p><input type="email" placeholder="tu@email.com" aria-label="Email"><button class="btn" type="button">Suscribirme</button></div>
+      <div class="box"><h3>Nuestro compromiso</h3><p class="trust">Contenido original y verificado, con autor, fecha y fuentes. Sin promesas de ganancias garantizadas. Lee nuestra política editorial.</p></div>
+    </aside>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><h4>Portal.Negocios</h4><p>Medio informativo sobre negocios online, comercio electrónico, marketing, IA y emprendimiento.</p></div>
+    <div><h4>Secciones</h4><ul><li>Actualidad</li><li>Comercio electrónico</li><li>Marketing y redes</li><li>IA y tecnología</li></ul></div>
+    <div><h4>El medio</h4><ul><li>Quiénes somos</li><li>Contacto</li><li>Política editorial</li><li>Privacidad · Cookies · Términos</li></ul></div>
+  </div>
+  <p class="small">Demo / boceto de portada para la propuesta. Nombre, textos e imágenes son de ejemplo.</p>
+</div></footer>
+</body>
+</html>
