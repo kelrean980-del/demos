@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>BrightPath Tuition Centre | Maths, Science &amp; English classes</title>
+<meta name="description" content="Demo homepage for a tuition centre: courses, teaching approach and a Book a Trial Class form.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1d2b64;--blue:#3b5bdb;--yellow:#ffc53d;--mint:#e7f5ff;--ink:#1e2433;--muted:#5f6880;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.logo{font-family:Poppins,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demo{background:#222;color:#ddd;font-size:12px;text-align:center;padding:6px}
+header{position:sticky;top:0;background:#fff;z-index:20;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:700;font-size:21px;color:var(--navy);display:flex;gap:8px;align-items:center}
+.logo b{background:var(--yellow);color:var(--navy);width:34px;height:34px;border-radius:10px;display:grid;place-items:center}
+nav ul{display:flex;gap:26px;list-style:none;font-weight:500;font-size:15px}
+.btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:700;padding:13px 24px;border-radius:12px;border:0;cursor:pointer;font-size:15px;font-family:Poppins,sans-serif;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(255,197,61,.4)}
+.btn.blue{background:var(--blue);color:#fff}
+.menu-btn{display:none;background:none;border:0;font-size:26px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:80px 0 90px;overflow:hidden}
+.hgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:13px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--yellow)}
+.hero p{font-size:18px;opacity:.92;margin-bottom:28px;max-width:520px}
+.hero .img{border-radius:28px;min-height:360px;background:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=70') center/cover;border:6px solid rgba(255,255,255,.2)}
+.stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+.stats b{display:block;font-size:26px;font-family:Poppins;color:var(--yellow)}
+section{padding:80px 0}
+.eyebrow{color:var(--blue);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(26px,3.2vw,38px);color:var(--navy);margin:6px 0 12px}
+.lead{color:var(--muted);max-width:600px;margin-bottom:40px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about ul{list-style:none;margin-top:16px}
+.about li{padding:8px 0 8px 32px;position:relative}
+.about li:before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--blue);font-weight:700;display:grid;place-items:center;font-size:13px}
+.quotebox{background:var(--mint);border-radius:var(--r);padding:34px;font-size:18px;color:var(--navy);font-family:Poppins;font-weight:500}
+.light{background:#f6f8fc}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{background:#fff;border-radius:var(--r);padding:30px;box-shadow:0 8px 26px rgba(29,43,100,.07);border-top:5px solid var(--c)}
+.course .ic{font-size:30px;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:#f1f3f9;margin-bottom:16px}
+.course h3{color:var(--navy);margin-bottom:6px}
+.course p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.course small{display:block;color:var(--muted);margin-bottom:16px}
+.course a{color:var(--blue);font-weight:600;cursor:pointer}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.w{text-align:center;padding:24px 16px}
+.w i{font-style:normal;font-size:30px;display:grid;place-items:center;width:70px;height:70px;border-radius:50%;background:var(--mint);margin:0 auto 14px}
+.w h3{font-size:17px;color:var(--navy)}
+.w p{font-size:14px;color:var(--muted)}
+.contact{background:var(--navy);color:#fff;border-radius:28px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.contact h2{color:#fff}
+.cbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.wa{background:#25d366;color:#fff}
+.call{background:#fff;color:var(--navy)}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+.modal{position:fixed;inset:0;background:rgba(10,15,40,.6);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:22px;padding:32px;width:100%;max-width:440px;position:relative}
+.mbox h3{color:var(--navy);margin-bottom:4px}
+.mbox p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.mbox input,.mbox select{width:100%;padding:12px 14px;border:1px solid #d7dceb;border-radius:10px;font:inherit;margin-bottom:12px}
+.x{position:absolute;right:16px;top:12px;background:none;border:0;font-size:24px;cursor:pointer}
+.float{position:fixed;right:18px;bottom:18px;z-index:30}
+@media(max-width:900px){
+ nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 22px;gap:12px}
+ nav ul.open{display:flex}.menu-btn{display:block}.nav .btn{display:none}
+ .hgrid,.about,.contact{grid-template-columns:1fr}.hero .img{min-height:240px}
+ .courses{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.contact{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto para la propuesta — generic centre name, free stock images</div>
+<header><div class="wrap nav">
+ <a class="logo" href="#"><b>B</b>BrightPath</a>
+ <nav><ul id="m"><li><a href="#about">About Us</a></li><li><a href="#courses">Courses</a></li><li><a href="#why">Why Us</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+ <button class="btn" onclick="openM()">Book a Trial Class</button>
+ <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+</div></header>
+
+<section class="hero"><div class="wrap hgrid">
+ <div>
+  <span class="tag">Grades 1–12 · Small groups · Expert tutors</span>
+  <h1>Confident students, <span>better results.</span></h1>
+  <p>Maths, Science and English classes that build understanding step by step, with regular progress updates for parents.</p>
+  <button class="btn" onclick="openM()">Book a Trial Class</button>
+  <div class="stats"><div><b>8:1</b>student-tutor ratio</div><div><b>95%</b>parents recommend us</div><div><b>10+</b>years teaching</div></div>
+ </div>
+ <div class="img" role="img" aria-label="Students learning"></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+ <div>
+  <div class="eyebrow">About us</div>
+  <h2>Learning that actually sticks</h2>
+  <p class="lead" style="margin-bottom:0">We combine clear explanations, guided practice and friendly feedback so every child moves forward at the right pace.</p>
+  <ul><li>Concept-first teaching, not memorising</li><li>Weekly practice and monthly tests</li><li>Parent reports after every month</li></ul>
+ </div>
+ <div class="quotebox">“Our objective is simple: help each student understand the why behind every answer, and enjoy learning again.”</div>
+</div></section>
+
+<section id="courses" class="light"><div class="wrap">
+ <div class="eyebrow">Courses offered</div>
+ <h2>Three core subjects, taught well</h2>
+ <p class="lead">Small batches by school year, aligned with the school syllabus and exam preparation.</p>
+ <div class="courses">
+  <div class="course" style="--c:#3b5bdb"><div class="ic">➗</div><h3>Mathematics</h3><p>From number sense to algebra and geometry, with lots of guided practice.</p><small>Grades 1–12 · 3 classes/week</small><a onclick="openM('Mathematics')">Book a trial →</a></div>
+  <div class="course" style="--c:#12b886"><div class="ic">🔬</div><h3>Science</h3><p>Physics, chemistry and biology explained with experiments and visuals.</p><small>Grades 3–12 · 2 classes/week</small><a onclick="openM('Science')">Book a trial →</a></div>
+  <div class="course" style="--c:#f59f00"><div class="ic">📚</div><h3>English</h3><p>Reading, grammar, writing and speaking skills for school and beyond.</p><small>Grades 1–10 · 2 classes/week</small><a onclick="openM('English')">Book a trial →</a></div>
+ </div>
+</div></section>
+
+<section id="why"><div class="wrap">
+ <div class="eyebrow">Why choose us</div>
+ <h2>What makes our classes different</h2>
+ <p class="lead">Methods, student support and learning benefits parents can see.</p>
+ <div class="why">
+  <div class="w"><i>👩‍🏫</i><h3>Qualified tutors</h3><p>Subject specialists who love teaching.</p></div>
+  <div class="w"><i>👥</i><h3>Small groups</h3><p>Personal attention for every child.</p></div>
+  <div class="w"><i>📈</i><h3>Progress tracking</h3><p>Monthly reports for parents.</p></div>
+  <div class="w"><i>💬</i><h3>Doubt sessions</h3><p>Extra help before exams.</p></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <div class="contact">
+  <div><h2>Talk to us today</h2><p>Questions about batches, timings or fees? Call or message us on WhatsApp, or book a free trial class.</p>
+   <div class="cbtns"><a class="btn call" href="tel:+910000000000">📞 Call now</a><a class="btn wa" href="https://wa.me/910000000000">WhatsApp</a></div></div>
+  <div style="text-align:center"><button class="btn" onclick="openM()" style="font-size:17px;padding:16px 30px">Book a Trial Class</button><p style="margin-top:12px;opacity:.8;font-size:14px">Free · 45 minutes · No commitment</p></div>
+ </div>
+</div></section>
+<footer>© 2026 BrightPath Tuition Centre (demo name) · Demo / boceto para la propuesta</footer>
+
+<a class="btn wa float" href="https://wa.me/910000000000" aria-label="WhatsApp">💬</a>
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()"><div class="mbox">
+ <button class="x" onclick="closeM()" aria-label="Close">×</button>
+ <h3>Book a Trial Class</h3><p>Fill in 4 details and we will confirm by WhatsApp or email.</p>
+ <form onsubmit="event.preventDefault();this.innerHTML='<p>Thank you! (demo form)</p>'">
+  <input placeholder="Student name" required>
+  <select required><option value="">School year</option><option>Grade 1–4</option><option>Grade 5–8</option><option>Grade 9–10</option><option>Grade 11–12</option></select>
+  <select id="subj"><option>Mathematics</option><option>Science</option><option>English</option></select>
+  <input type="date" aria-label="Preferred trial date" required>
+  <button class="btn blue" style="width:100%">Request trial</button>
+ </form>
+</div></div>
+<script>
+function openM(s){document.getElementById('modal').classList.add('on');if(s){var e=document.getElementById('subj');if(e)e.value=s}}
+function closeM(){document.getElementById('modal').classList.remove('on')}
+</script>
+</body></html>
