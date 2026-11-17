@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Village Dental Practice | Book your appointment online | Demo</title>
+<meta name="description" content="Homepage mockup for a small village dental practice with a real-time online booking widget: choose dentist or hygienist, pick a free slot and get instant confirmation.">
+<meta name="robots" content="noindex">
+<style>
+:root{--g:#3f7d5b;--gd:#2e5f44;--cream:#faf6ee;--sand:#efe6d4;--t:#26302b;--m:#5f6b64;--acc:#e08e45;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.demo{background:var(--t);color:#cfd8d2;font-size:12px;text-align:center;padding:5px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);box-shadow:0 1px 0 #ece6da;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--gd)}
+.logo i{width:36px;height:36px;border-radius:50%;background:var(--g);display:grid;place-items:center;color:#fff;font-style:normal}
+nav ul{display:flex;gap:26px;list-style:none;font-size:15px;color:var(--m)}
+nav a:hover{color:var(--g)}
+.btn{display:inline-block;background:var(--g);color:#fff;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--gd)}
+.btn.alt{background:transparent;color:var(--gd);border:2px solid var(--g)}
+.hero{background:linear-gradient(160deg,var(--cream),var(--sand));padding:64px 0 76px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:radial-gradient(120% 90px at 50% 100%,#fff 60%,transparent 61%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;position:relative;z-index:1}
+.tag{display:inline-block;background:#fff;color:var(--g);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.12;margin-bottom:16px}
+h1 em{font-style:normal;color:var(--g)}
+.hero p{color:var(--m);font-size:18px;max-width:520px;margin-bottom:26px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:26px;margin-top:30px;font-size:14px;color:var(--m);flex-wrap:wrap}
+.facts b{display:block;font-size:20px;color:var(--t)}
+.book{background:#fff;border-radius:var(--r);box-shadow:0 24px 60px rgba(46,95,68,.16);padding:24px}
+.book h3{font-size:20px}.book small{color:var(--m)}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.who button{padding:12px;border:2px solid #e3ddd0;border-radius:12px;background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--m)}
+.who button.on{border-color:var(--g);color:var(--gd);background:#f1f7f3}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px}
+.day{text-align:center;border-radius:10px;padding:8px 0;background:var(--cream);font-size:13px;cursor:pointer}
+.day b{display:block;font-size:17px}
+.day.on{background:var(--g);color:#fff}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
+.slot{padding:8px 0;text-align:center;border:1px solid #d9e6dd;border-radius:9px;font-size:14px;cursor:pointer}
+.slot.off{color:#b8beb9;background:#f5f5f3;text-decoration:line-through;cursor:not-allowed}
+.slot.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.book .btn{width:100%}
+.note{font-size:12px;color:var(--m);margin-top:10px;display:flex;gap:6px}
+.ok{display:none;margin-top:12px;background:#eef6f0;border-radius:10px;padding:10px 12px;font-size:14px;color:var(--gd)}
+section{padding:70px 0}
+.h2{text-align:center;max-width:640px;margin:0 auto 40px}
+.h2 h2{font-size:clamp(26px,3.5vw,36px);margin-bottom:8px}.h2 p{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{background:var(--cream);border-radius:var(--r);padding:24px;transition:.2s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.ico{width:46px;height:46px;border-radius:12px;background:#fff;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.svc h3{font-size:18px;margin-bottom:4px}.svc p{color:var(--m);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{border:1px solid #ece6da;border-radius:var(--r);padding:24px;position:relative}
+.step:before{counter-increment:s;content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:10px}
+.step p{color:var(--m);font-size:15px}
+.team{background:var(--cream)}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.doc{background:#fff;border-radius:var(--r);overflow:hidden;text-align:center}
+.ph{height:190px;background:linear-gradient(160deg,#dbe9df,#b9d3c1);display:grid;place-items:center;color:#5c7d66;font-size:13px}
+.doc .b{padding:16px}.doc small{color:var(--g);font-weight:600}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{border:1px solid #ece6da;border-radius:var(--r);padding:22px}
+.stars{color:var(--acc);letter-spacing:2px}.rev p{color:var(--m);font-size:15px;margin:6px 0 10px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.map{border-radius:var(--r);background:repeating-linear-gradient(45deg,#e9efe9 0 14px,#f3f6f2 14px 28px);display:grid;place-items:center;color:var(--m);min-height:260px;font-size:14px}
+.info{background:var(--cream);border-radius:var(--r);padding:28px}
+.info h3{margin-bottom:10px}.info li{list-style:none;display:flex;justify-content:space-between;border-bottom:1px dashed #ddd3c0;padding:7px 0;font-size:15px}
+footer{background:var(--t);color:#cfd8d2;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+@media(max-width:900px){.hero .wrap,.visit{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.docs,.revs,.steps{grid-template-columns:1fr}nav ul{display:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.slots{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / homepage mockup for the proposal – placeholder name, texts and images</div>
+<header><div class="wrap nav">
+<a href="#" class="logo"><i>&#9752;</i>Village Dental Practice</a>
+<nav><ul><li><a href="#services">Services</a></li><li><a href="#team">Our team</a></li><li><a href="#visit">Contact</a></li></ul></nav>
+<a href="#book" class="btn">Book online</a>
+</div></header>
+
+<section class="hero" id="book"><div class="wrap">
+<div>
+<span class="tag">New patients welcome</span>
+<h1>Friendly dental care, <em>booked in a minute</em></h1>
+<p>Choose a dentist or hygienist, pick a free time that suits you and get instant confirmation by email and SMS. No phone queue, no waiting.</p>
+<div class="ctas"><a href="#book" class="btn">See free times</a><a href="#services" class="btn alt">Our treatments</a></div>
+<div class="facts"><div><b>24/7</b>online booking</div><div><b>Email + SMS</b>confirmations</div><div><b>GDPR</b>secure data</div></div>
+</div>
+<div class="book">
+<h3>Book your appointment</h3><small>Only available times are shown</small>
+<div class="who"><button class="on" data-w="Dentist">Dentist</button><button data-w="Hygienist">Hygienist</button></div>
+<div class="days" id="days"></div>
+<div class="slots" id="slots"></div>
+<button class="btn" id="go">Confirm appointment</button>
+<div class="ok" id="ok"></div>
+<div class="note">&#128274; Your details are stored securely and only used for your appointment.</div>
+</div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="h2"><h2>Treatments for the whole family</h2><p>Everything you need for a healthy smile, close to home.</p></div>
+<div class="grid">
+<div class="svc"><div class="ico">&#129463;</div><h3>Check-ups</h3><p>Routine exams and X-rays for adults and children.</p></div>
+<div class="svc"><div class="ico">&#10024;</div><h3>Hygienist</h3><p>Professional cleaning, scale and polish, gum care.</p></div>
+<div class="svc"><div class="ico">&#128737;</div><h3>Fillings</h3><p>Tooth-coloured fillings that look natural.</p></div>
+<div class="svc"><div class="ico">&#128106;</div><h3>Children</h3><p>Gentle first visits that kids actually enjoy.</p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="h2"><h2>How online booking works</h2></div>
+<div class="steps">
+<div class="step"><h3>Choose who you see</h3><p>Dentist or hygienist, the calendar adapts to each one.</p></div>
+<div class="step"><h3>Pick a free slot</h3><p>Real-time availability, holidays and breaks are blocked automatically.</p></div>
+<div class="step"><h3>Get confirmation</h3><p>Instant email and SMS, plus a reminder the day before.</p></div>
+</div></div></section>
+
+<section class="team" id="team"><div class="wrap">
+<div class="h2"><h2>Meet the team</h2><p>A small, local team that knows your name.</p></div>
+<div class="docs">
+<div class="doc"><div class="ph">Team photo</div><div class="b"><h3>Dr. Name Surname</h3><small>Principal dentist</small></div></div>
+<div class="doc"><div class="ph">Team photo</div><div class="b"><h3>Name Surname</h3><small>Dental hygienist</small></div></div>
+<div class="doc"><div class="ph">Team photo</div><div class="b"><h3>Name Surname</h3><small>Reception</small></div></div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="h2"><h2>What our patients say</h2></div>
+<div class="revs">
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Booked at 10pm from my phone and got a text straight away. So easy."</p><small>Sample review</small></div>
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Lovely, calm practice. My kids are no longer scared of the dentist."</p><small>Sample review</small></div>
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Friendly hygienist and no waiting room queue at all."</p><small>Sample review</small></div>
+</div></div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap visit">
+<div class="map">Google Map embed</div>
+<div class="info"><h3>Visit us</h3>
+<ul><li><span>Monday – Thursday</span><span>8:30 – 17:30</span></li><li><span>Friday</span><span>8:30 – 14:00</span></li><li><span>Saturday – Sunday</span><span>Closed</span></li></ul>
+<p style="margin-top:14px;color:var(--m)">Main Street, Village · 01234 567 890 · hello@example.com</p>
+<a href="#book" class="btn" style="margin-top:16px">Book online</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; Village Dental Practice (demo)</span><span>Privacy policy · Cookies · GDPR</span></div></footer>
+<script>
+const days=document.getElementById('days'),slots=document.getElementById('slots'),ok=document.getElementById('ok');
+let who='Dentist',sel=null,day=null;const n=['Mon','Tue','Wed','Thu','Fri'];
+const base=new Date();base.setDate(base.getDate()+1);
+for(let i=0,c=0;c<5;i++){const d=new Date(base);d.setDate(base.getDate()+i);if(d.getDay()==0||d.getDay()==6)continue;
+const el=document.createElement('div');el.className='day'+(c==0?' on':'');el.innerHTML=n[d.getDay()-1]+'<b>'+d.getDate()+'</b>';
+el.onclick=()=>{document.querySelectorAll('.day').forEach(x=>x.classList.remove('on'));el.classList.add('on');day=el.textContent;render()};if(c==0)day=el.textContent;days.appendChild(el);c++}
+function render(){slots.innerHTML='';sel=null;const t=['9:00','9:30','10:00','10:30','11:30','12:00','14:00','15:30'];
+t.forEach((s,i)=>{const b=document.createElement('div');const off=((i+day.length+(who=='Dentist'?0:1))%3)==0;b.className='slot'+(off?' off':'');b.textContent=s;
+if(!off)b.onclick=()=>{document.querySelectorAll('.slot').forEach(x=>x.classList.remove('on'));b.classList.add('on');sel=s};slots.appendChild(b)})}
+document.querySelectorAll('.who button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.who button').forEach(x=>x.classList.remove('on'));b.classList.add('on');who=b.dataset.w;render()});
+document.getElementById('go').onclick=()=>{ok.style.display='block';ok.textContent=sel?('Demo: '+who+' appointment held for '+sel+'. Confirmation sent by email and SMS.'):'Please choose a free time first.'};
+render();
+</script>
+</body>
+</html>

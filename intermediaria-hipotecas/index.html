@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Intermediación hipotecaria | Tu hipoteca, mejor negociada | Demo</title>
+<meta name="description" content="Boceto de portada para una intermediaria de crédito hipotecario en España: servicios, cómo trabajamos, simulador orientativo, FAQ y formulario de contacto.">
+<meta name="robots" content="noindex">
+<style>
+:root{--n:#13294b;--n2:#1e3d6e;--gold:#c9a24a;--bg:#f4f6fa;--t:#1b2333;--m:#5c6678;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}
+.demo{background:#0b1830;color:#aeb8cc;font-size:12px;text-align:center;padding:5px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{background:#fff;box-shadow:0 1px 0 #e5e9f0;position:sticky;top:0;z-index:5}
+.nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-weight:800;font-size:19px;color:var(--n);display:flex;gap:10px;align-items:center}
+.logo i{width:34px;height:34px;border-radius:8px;background:var(--n);color:var(--gold);display:grid;place-items:center;font-style:normal}
+nav ul{display:flex;gap:24px;list-style:none;color:var(--m);font-size:15px}
+.btn{display:inline-block;background:var(--gold);color:#1b1a14;padding:12px 22px;border-radius:8px;font-weight:700;font-size:15px;border:0;cursor:pointer}
+.btn.o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.hero{background:linear-gradient(135deg,var(--n),var(--n2));color:#fff;padding:70px 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.tag{display:inline-block;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 14px;font-size:13px;margin-bottom:16px;color:#dfe5f0}
+h1{font-size:clamp(30px,4.6vw,48px);line-height:1.15;margin-bottom:16px}
+h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:#c9d2e3;font-size:18px;max-width:520px;margin-bottom:26px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.seals{display:flex;gap:22px;margin-top:28px;font-size:13px;color:#c9d2e3;flex-wrap:wrap}
+.seals b{display:block;color:#fff;font-size:15px}
+.sim{background:#fff;color:var(--t);border-radius:var(--r);padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.sim h3{margin-bottom:4px}.sim small{color:var(--m)}
+.sim label{display:block;font-size:14px;color:var(--m);margin:14px 0 4px}
+.sim input[type=range]{width:100%;accent-color:var(--n2)}
+.sim .v{float:right;font-weight:700;color:var(--n)}
+.res{background:var(--bg);border-radius:10px;padding:14px;margin:16px 0;display:flex;justify-content:space-between;align-items:center}
+.res b{font-size:26px;color:var(--n)}
+.sim .btn{width:100%}
+section{padding:70px 0}
+.h2{text-align:center;max-width:640px;margin:0 auto 40px}.h2 h2{font-size:clamp(26px,3.4vw,34px);color:var(--n);margin-bottom:8px}.h2 p{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{border:1px solid #e5e9f0;border-radius:var(--r);padding:26px;transition:.2s}
+.c:hover{box-shadow:0 14px 34px rgba(19,41,75,.08);transform:translateY(-3px)}
+.c .i{width:44px;height:44px;border-radius:10px;background:var(--bg);display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.c h3{color:var(--n);margin-bottom:4px}.c p{color:var(--m);font-size:15px}
+.how{background:var(--bg)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.st{background:#fff;border-radius:var(--r);padding:22px}
+.st:before{counter-increment:s;content:"0" counter(s);font-weight:800;color:var(--gold);font-size:24px}
+.st h3{font-size:17px;color:var(--n)}.st p{font-size:14px;color:var(--m)}
+.faq{max-width:800px;margin:0 auto}
+details{border-bottom:1px solid #e5e9f0;padding:16px 0}
+summary{font-weight:600;color:var(--n);cursor:pointer}
+details p{color:var(--m);margin-top:8px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.contact form{display:grid;gap:12px;background:var(--bg);padding:26px;border-radius:var(--r)}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d6dce6;border-radius:8px;font:inherit;font-size:15px;background:#fff}
+.chk{font-size:13px;color:var(--m);display:flex;gap:8px;align-items:flex-start}.chk input{width:auto;margin-top:4px}
+.blog{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.post{border-radius:var(--r);overflow:hidden;border:1px solid #e5e9f0}
+.post .ph{height:140px;background:linear-gradient(135deg,#dfe6f2,#c4d0e4);display:grid;place-items:center;color:#7a879e;font-size:13px}
+.post div.b{padding:16px}.post small{color:var(--gold);font-weight:700}.post h3{font-size:17px;color:var(--n)}
+footer{background:#0b1830;color:#aeb8cc;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:900px){.hero .wrap,.contact{grid-template-columns:1fr}.grid,.blog{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto de portada para la propuesta – nombre, textos e imágenes de ejemplo</div>
+<header><div class="wrap nav"><a class="logo" href="#"><i>&#8962;</i>Tu Intermediaria Hipotecaria</a>
+<nav><ul><li><a href="#servicios">Servicios</a></li><li><a href="#como">Cómo trabajamos</a></li><li><a href="#faq">Preguntas</a></li><li><a href="#blog">Blog</a></li></ul></nav>
+<a class="btn" href="#contacto">Estudio gratuito</a></div></header>
+
+<section class="hero"><div class="wrap">
+<div><span class="tag">Intermediario de crédito inmobiliario registrado</span>
+<h1>Tu hipoteca, <em>mejor negociada</em> y sin perder tiempo</h1>
+<p>Comparamos las ofertas de varias entidades, negociamos por ti y te acompañamos hasta la firma ante notario. Sin sorpresas y con total transparencia.</p>
+<div class="ctas"><a class="btn" href="#contacto">Solicitar estudio gratuito</a><a class="btn o" href="#como">Cómo trabajamos</a></div>
+<div class="seals"><div><b>Ley 5/2019</b>Crédito inmobiliario</div><div><b>RGPD</b>Datos protegidos</div><div><b>+20</b>entidades comparadas*</div></div>
+</div>
+<div class="sim"><h3>Calcula tu cuota orientativa</h3><small>Simulación sin compromiso</small>
+<label>Importe de la hipoteca <span class="v" id="vi"></span></label><input type="range" id="imp" min="50000" max="500000" step="5000" value="180000">
+<label>Plazo <span class="v" id="vp"></span></label><input type="range" id="pla" min="10" max="35" value="30">
+<label>Tipo de interés orientativo <span class="v" id="vt"></span></label><input type="range" id="tip" min="1.5" max="5" step="0.1" value="2.8">
+<div class="res"><span>Cuota mensual aprox.</span><b id="cuota"></b></div>
+<a class="btn" href="#contacto">Quiero mejorar estas condiciones</a></div>
+</div></section>
+
+<section id="servicios"><div class="wrap"><div class="h2"><h2>Servicios de intermediación hipotecaria</h2><p>Te ayudamos en cada tipo de operación.</p></div>
+<div class="grid">
+<div class="c"><div class="i">&#127968;</div><h3>Primera vivienda</h3><p>Buscamos la mejor financiación para comprar tu primera casa, incluso con poca entrada.</p></div>
+<div class="c"><div class="i">&#128260;</div><h3>Mejora de hipoteca</h3><p>Subrogación o cambio de banco para bajar tu cuota o tu tipo de interés.</p></div>
+<div class="c"><div class="i">&#127758;</div><h3>No residentes</h3><p>Financiación para compradores extranjeros que invierten en España.</p></div>
+</div></div></section>
+
+<section class="how" id="como"><div class="wrap"><div class="h2"><h2>Cómo trabajamos</h2><p>Un proceso claro, de principio a fin.</p></div>
+<div class="steps">
+<div class="st"><h3>Estudio gratuito</h3><p>Analizamos tu perfil y tu capacidad de financiación.</p></div>
+<div class="st"><h3>Comparamos</h3><p>Pedimos ofertas a varias entidades y te las explicamos.</p></div>
+<div class="st"><h3>Negociamos</h3><p>Conseguimos mejores condiciones en tipo y vinculaciones.</p></div>
+<div class="st"><h3>Firma</h3><p>Te acompañamos hasta la firma ante notario.</p></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><div class="h2"><h2>Preguntas frecuentes</h2></div>
+<div class="faq">
+<details open><summary>Cuánto cuesta vuestro servicio</summary><p>Texto de ejemplo: aquí se explican los honorarios de forma clara, tal como exige la normativa.</p></details>
+<details><summary>Qué documentación necesito</summary><p>Texto de ejemplo: DNI, nóminas, declaración de la renta y vida laboral.</p></details>
+<details><summary>Cuánto tarda el proceso</summary><p>Texto de ejemplo: plazos orientativos desde el estudio hasta la firma.</p></details>
+</div></div></section>
+
+<section id="blog" style="padding-top:0"><div class="wrap"><div class="h2"><h2>Blog del mercado hipotecario</h2></div>
+<div class="blog">
+<div class="post"><div class="ph">Imagen</div><div class="b"><small>GUÍA</small><h3>Fija, variable o mixta: cuál te conviene</h3></div></div>
+<div class="post"><div class="ph">Imagen</div><div class="b"><small>EURÍBOR</small><h3>Cómo afecta el euríbor a tu cuota</h3></div></div>
+<div class="post"><div class="ph">Imagen</div><div class="b"><small>AHORRO</small><h3>Gastos de compraventa que debes conocer</h3></div></div>
+</div></div></section>
+
+<section id="contacto" style="padding-top:0"><div class="wrap contact">
+<div><div class="h2" style="text-align:left;margin:0 0 16px"><h2>Pide tu estudio gratuito</h2><p>Te llamamos en menos de 24 horas laborables.</p></div>
+<p style="color:var(--m)">Calle Ejemplo 1, Ciudad · 900 000 000 · info@ejemplo.com</p></div>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Demo: solicitud recibida'">
+<input placeholder="Nombre y apellidos" required><input type="email" placeholder="Email" required><input placeholder="Teléfono">
+<select><option>Primera vivienda</option><option>Mejora de hipoteca</option><option>No residente</option></select>
+<label class="chk"><input type="checkbox" required> He leído y acepto la política de privacidad (RGPD).</label>
+<button class="btn">Enviar solicitud</button></form>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; Tu Intermediaria Hipotecaria (boceto)</span><span>Aviso legal · Privacidad · Cookies · *Dato de ejemplo</span></div></footer>
+<script>
+const f=n=>n.toLocaleString('es-ES');
+function calc(){const P=+imp.value,n=pla.value*12,r=tip.value/1200;const c=P*r/(1-Math.pow(1+r,-n));
+vi.textContent=f(P)+' €';vp.textContent=pla.value+' años';vt.textContent=(+tip.value).toLocaleString('es-ES')+' %';cuota.textContent=f(Math.round(c))+' €'}
+[imp,pla,tip].forEach(e=>e.oninput=calc);calc();
+</script>
+</body>
+</html>
