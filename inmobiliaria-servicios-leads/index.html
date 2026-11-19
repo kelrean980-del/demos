@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inmobiliaria | Compra, venta y alquiler con asesoramiento cercano | Demo</title>
+<meta name="description" content="Boceto de portada para una inmobiliaria en España: servicios, buscador de inmuebles integrado desde el portal externo y formulario de captación de leads.">
+<meta name="robots" content="noindex">
+<style>
+:root{--p:#0f3d3e;--p2:#145a5b;--a:#e8a33d;--bg:#f5f7f6;--t:#1c2526;--m:#5d6a6b;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}
+.demo{background:#0a2627;color:#a9c0c0;font-size:12px;text-align:center;padding:5px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{background:#fff;box-shadow:0 1px 0 #e3e9e8;position:sticky;top:0;z-index:5}
+.nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-weight:800;font-size:19px;color:var(--p);display:flex;gap:10px;align-items:center}
+.logo i{width:34px;height:34px;border-radius:8px;background:var(--p);color:var(--a);display:grid;place-items:center;font-style:normal}
+nav ul{display:flex;gap:24px;list-style:none;color:var(--m);font-size:15px}
+.btn{display:inline-block;background:var(--a);color:#1d1606;padding:12px 22px;border-radius:8px;font-weight:700;font-size:15px;border:0;cursor:pointer}
+.btn.o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.hero{background:linear-gradient(100deg,rgba(10,38,39,.92),rgba(15,61,62,.7)),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=70') center/cover;color:#fff;padding:90px 0 110px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.15;max-width:680px}
+.hero p{max-width:560px;margin:18px 0 28px;color:#d6e4e3;font-size:18px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.search{background:#fff;border-radius:var(--r);box-shadow:0 18px 40px rgba(0,0,0,.12);padding:18px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:10px;margin-top:-50px;position:relative}
+.search select,.search input,form input,form select,form textarea{width:100%;padding:12px;border:1px solid #d5dedd;border-radius:8px;font:inherit;font-size:15px;background:#fff}
+section{padding:70px 0}
+h2{font-size:clamp(24px,3.4vw,34px);color:var(--p);margin-bottom:10px}
+.lead{color:var(--m);max-width:640px;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #e3e9e8;border-radius:var(--r);padding:26px}
+.card b{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:#e7f1f0;color:var(--p);font-size:20px;margin-bottom:14px}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{color:var(--m);font-size:15px}
+.bg{background:var(--bg)}
+.prop{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.prop .img{height:170px;background:#cfdcdb center/cover}
+.prop .in{padding:16px}
+.prop .pr{color:var(--p);font-weight:800;font-size:20px}
+.prop small{color:var(--m)}
+.tag{display:inline-block;background:var(--a);color:#1d1606;font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px}
+.feed{font-size:13px;color:var(--m);text-align:center;margin-top:18px;border:1px dashed #b9c9c8;border-radius:8px;padding:10px}
+.steps{counter-reset:s}
+.steps .card h3::before{counter-increment:s;content:counter(s)". ";color:var(--a)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+form{background:#fff;border-radius:var(--r);padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:grid;gap:12px}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form label{font-size:13px;color:var(--m)}
+.ok{display:none;background:#e3f4ea;color:#1f6b3b;padding:10px;border-radius:8px;font-size:14px}
+ul.check{list-style:none;display:grid;gap:10px;margin-top:18px}
+ul.check li::before{content:"✓ ";color:var(--a);font-weight:800}
+footer{background:#0a2627;color:#a9c0c0;padding:30px 0;font-size:14px}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;border-radius:30px;padding:12px 18px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.search{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}nav ul{display:none}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.search{grid-template-columns:1fr}.hero{padding:60px 0 90px}form .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto para la propuesta: nombre, textos, inmuebles e imágenes de ejemplo</div>
+<header><div class="wrap nav"><a class="logo" href="#"><i>⌂</i>Inmobiliaria Ejemplo</a>
+<nav><ul><li><a href="#servicios">Servicios</a></li><li><a href="#inmuebles">Inmuebles</a></li><li><a href="#como">Cómo trabajamos</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+<a class="btn" href="#contacto">Valora tu vivienda</a></div></header>
+
+<div class="hero"><div class="wrap">
+<h1>Compra, vende o alquila tu vivienda con un equipo que conoce tu zona</h1>
+<p>Asesoramiento cercano, valoración gratuita y todo el proceso de principio a fin: visitas, negociación, notaría e hipoteca.</p>
+<div class="cta"><a class="btn" href="#inmuebles">Ver inmuebles</a><a class="btn o" href="#contacto">Hablar con un asesor</a></div>
+</div></div>
+
+<div class="wrap"><form class="search" onsubmit="event.preventDefault();location.hash='inmuebles'">
+<select aria-label="Operación"><option>Comprar</option><option>Alquilar</option></select>
+<select aria-label="Tipo"><option>Piso</option><option>Casa / chalet</option><option>Local</option><option>Terreno</option></select>
+<input aria-label="Zona" placeholder="Zona o ciudad">
+<select aria-label="Precio"><option>Precio máximo</option><option>150.000 €</option><option>250.000 €</option><option>400.000 €</option></select>
+<button class="btn">Buscar</button></form></div>
+
+<section id="servicios"><div class="wrap">
+<h2>Nuestros servicios</h2><p class="lead">Todo lo que necesitas para comprar, vender o alquilar sin complicaciones.</p>
+<div class="grid">
+<div class="card"><b>€</b><h3>Venta de inmuebles</h3><p>Valoración, reportaje fotográfico, difusión en portales y negociación con compradores.</p></div>
+<div class="card"><b>⌕</b><h3>Búsqueda para compradores</h3><p>Te enviamos solo los inmuebles que encajan con lo que buscas y te acompañamos en las visitas.</p></div>
+<div class="card"><b>⚿</b><h3>Gestión de alquileres</h3><p>Selección de inquilinos, contratos, cobros e incidencias para que no te preocupes de nada.</p></div>
+</div></div></section>
+
+<section id="inmuebles" class="bg"><div class="wrap">
+<h2>Inmuebles destacados</h2><p class="lead">El catálogo se carga directamente desde el portal inmobiliario de la agencia, con el diseño de la web.</p>
+<div class="grid">
+<div class="prop"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=60')"></div><div class="in"><span class="tag">Venta</span><div class="pr">215.000 €</div><b>Piso luminoso en el centro</b><br><small>3 hab · 2 baños · 95 m²</small></div></div>
+<div class="prop"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=60')"></div><div class="in"><span class="tag">Venta</span><div class="pr">389.000 €</div><b>Chalet con jardín y piscina</b><br><small>4 hab · 3 baños · 210 m²</small></div></div>
+<div class="prop"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=700&q=60')"></div><div class="in"><span class="tag">Alquiler</span><div class="pr">850 €/mes</div><b>Apartamento reformado</b><br><small>2 hab · 1 baño · 70 m²</small></div></div>
+</div>
+<p class="feed">Zona preparada para integrar el feed del portal (API, widget o iframe adaptado). Inmuebles de ejemplo.</p>
+</div></section>
+
+<section id="como"><div class="wrap steps">
+<h2>Cómo trabajamos</h2><p class="lead">Un proceso claro y sin sorpresas.</p>
+<div class="grid">
+<div class="card"><h3>Nos cuentas qué necesitas</h3><p>Por teléfono, WhatsApp o el formulario. Te respondemos en menos de 24 horas.</p></div>
+<div class="card"><h3>Valoración y plan</h3><p>Analizamos el mercado de tu zona y te proponemos precio y estrategia.</p></div>
+<div class="card"><h3>Te acompañamos hasta la firma</h3><p>Visitas, ofertas, documentación y notaría, siempre con un asesor asignado.</p></div>
+</div></div></section>
+
+<section id="contacto" class="bg"><div class="wrap contact">
+<div><h2>Cuéntanos qué buscas</h2><p class="lead">Déjanos tus datos y un asesor te llamará. Las consultas llegan al correo de la agencia y quedan guardadas para su seguimiento.</p>
+<ul class="check"><li>Valoración gratuita de tu vivienda</li><li>Respuesta en menos de 24 h</li><li>Sin compromiso</li></ul></div>
+<form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
+<div class="two"><div><label>Nombre</label><input required></div><div><label>Teléfono</label><input type="tel" required></div></div>
+<div><label>Email</label><input type="email" required></div>
+<div><label>Me interesa</label><select><option>Vender</option><option>Comprar</option><option>Alquilar</option><option>Poner en alquiler</option></select></div>
+<div><label>Mensaje</label><textarea rows="3"></textarea></div>
+<label style="display:flex;gap:8px;align-items:center"><input type="checkbox" required style="width:auto"> Acepto la política de privacidad</label>
+<button class="btn">Enviar consulta</button>
+<div class="ok">Gracias. Te contactaremos pronto (demo, no se envía nada).</div>
+</form></div></section>
+
+<footer><div class="wrap">Inmobiliaria Ejemplo · Demo / boceto para la propuesta · Aviso legal · Privacidad · Cookies</div></footer>
+<a class="wa" href="#contacto">WhatsApp</a>
+</body></html>
