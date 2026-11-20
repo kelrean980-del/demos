@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northtone Publishing | Artist roster &amp; curated compilations | Demo</title>
+<meta name="description" content="Demo / homepage mockup for a proposal: music publishing roster, searchable catalog and licensing enquiries.">
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#0d0e12;--panel:#15171d;--panel2:#1c1f27;--ink:#f3f1ec;--muted:#a3a7b3;--line:#2a2e38;--accent:#e8b44c;--accent2:#7c5cff;--r:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,calc(100% - 2rem));margin:0 auto}
+.demo-badge{position:fixed;bottom:12px;left:12px;z-index:50;background:rgba(255,255,255,.08);border:1px solid var(--line);backdrop-filter:blur(6px);color:var(--muted);font-size:12px;padding:6px 10px;border-radius:999px}
+header{position:sticky;top:0;z-index:20;background:rgba(13,14,18,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
+.logo{font-weight:800;letter-spacing:.02em;display:flex;align-items:center;gap:.55rem}
+.logo i{width:26px;height:26px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent2),var(--accent));display:inline-block;position:relative}
+.logo i:after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--bg)}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-size:.95rem;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.2rem;border-radius:999px;font-weight:600;border:1px solid transparent;cursor:pointer;font-size:.95rem;font-family:inherit}
+.btn-primary{background:var(--accent);color:#1a1405}.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}.btn-ghost:hover{border-color:var(--muted)}
+.hero{padding:5rem 0 3.5rem;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-200px;background:radial-gradient(circle,rgba(124,92,255,.35),transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;position:relative}
+.eyebrow{color:var(--accent);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;margin:.6rem 0 1rem;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#f6d48f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.1rem;max-width:34rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.stats{display:flex;gap:2rem;margin-top:2.2rem;color:var(--muted);font-size:.9rem}.stats b{display:block;color:var(--ink);font-size:1.5rem}
+.feature{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:1.2rem;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.cover{aspect-ratio:1;border-radius:14px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:1.1rem;font-weight:800;font-size:1.5rem;line-height:1.1}
+.c1{background:radial-gradient(circle at 30% 30%,#ffcf70,transparent 45%),radial-gradient(circle at 75% 70%,#7c5cff,transparent 50%),#1b1530}
+.c2{background:linear-gradient(135deg,#0f766e,#134e4a 60%,#e8b44c)}
+.c3{background:radial-gradient(circle at 70% 20%,#f472b6,transparent 45%),linear-gradient(160deg,#312e81,#0f172a)}
+.c4{background:repeating-linear-gradient(45deg,#1f2937 0 14px,#111827 14px 28px),#111}
+.c5{background:radial-gradient(circle at 50% 110%,#fb923c,transparent 60%),#18181b}
+.c6{background:linear-gradient(200deg,#a3e635,#14532d)}
+.c7{background:conic-gradient(from 90deg,#0ea5e9,#6366f1,#0ea5e9)}
+.c8{background:radial-gradient(circle at 20% 80%,#e11d48,transparent 50%),#1e1b4b}
+.player{display:flex;align-items:center;gap:.8rem;margin-top:1rem;background:var(--panel2);border-radius:12px;padding:.7rem .8rem}
+.play{width:40px;height:40px;border-radius:50%;background:var(--accent);border:0;cursor:pointer;flex:none;position:relative}
+.play:after{content:"";position:absolute;left:15px;top:12px;border-left:13px solid #1a1405;border-top:8px solid transparent;border-bottom:8px solid transparent}
+.play.on:after{left:13px;top:12px;width:4px;height:16px;border:0;background:#1a1405;box-shadow:8px 0 0 #1a1405}
+.wave{flex:1;display:flex;align-items:center;gap:3px;height:34px}
+.wave span{flex:1;background:#3a3f4c;border-radius:2px}
+.wave.on span{background:var(--accent);animation:bar 1s ease-in-out infinite alternate}
+@keyframes bar{from{transform:scaleY(.4)}to{transform:scaleY(1)}}
+.meta{font-size:.82rem;color:var(--muted)}
+.note{font-size:.75rem;color:var(--muted);margin-top:.6rem}
+section{padding:4rem 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
+h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:.3rem 0 0;letter-spacing:-.01em}
+.tools{display:flex;gap:.6rem;flex-wrap:wrap}
+.search{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.7rem 1.1rem;min-width:260px;font:inherit}
+.chip{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:.55rem .95rem;cursor:pointer;font:inherit;font-size:.88rem}
+.chip.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:.8rem;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:#3c4250}
+.card .cover{font-size:1.05rem}
+.card h3{margin:.8rem 0 .1rem;font-size:1.02rem}
+.tag{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-top:.2rem}
+.links{display:flex;gap:.5rem;margin-top:.7rem;flex-wrap:wrap}
+.links a,.links button{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:.35rem .7rem;background:transparent;color:var(--ink);cursor:pointer;font-family:inherit}
+.links a:hover,.links button:hover{border-color:var(--accent)}
+.empty{display:none;color:var(--muted);padding:2rem 0}
+.roster{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.artist{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.artist .ph{height:200px;display:flex;align-items:flex-end;padding:1rem;font-weight:800;font-size:1.4rem}
+.artist .body{padding:1.1rem}.artist p{color:var(--muted);font-size:.92rem;margin:.4rem 0 0}
+.licensing{background:linear-gradient(135deg,#1c1930,#14161c);border:1px solid var(--line);border-radius:24px;padding:2.5rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+.licensing ul{color:var(--muted);padding-left:1.1rem;margin:.8rem 0 0}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.news article{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem}
+.news time{color:var(--accent);font-size:.8rem}.news h3{margin:.4rem 0;font-size:1.05rem}.news p{color:var(--muted);font-size:.9rem;margin:0}
+footer{border-top:1px solid var(--line);padding:2.5rem 0;color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+dialog{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:20px;padding:1.6rem;width:min(480px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+form{display:grid;gap:.8rem}label{font-size:.85rem;color:var(--muted);display:grid;gap:.3rem}
+input,select,textarea{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:.7rem;color:var(--ink);font:inherit}
+.row{display:flex;gap:.6rem;justify-content:flex-end}
+@media(max-width:960px){.hero-grid,.licensing{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.roster,.news{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:560px){.grid,.roster,.news{grid-template-columns:1fr}.search{min-width:0;width:100%}.hero{padding-top:3rem}.stats{gap:1.2rem}.licensing{padding:1.5rem}}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo / boceto para la propuesta</div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><i></i>Northtone Publishing</a>
+  <nav><ul><li><a href="#catalog">Catalog</a></li><li><a href="#roster">Artists</a></li><li><a href="#licensing">Licensing</a></li><li><a href="#news">News</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+  <button class="btn btn-primary" data-enquiry="General enquiry">Licensing enquiry</button>
+</div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">Independent music publishing</div>
+    <h1>Songs, artists and <em>curated compilations</em> ready to license.</h1>
+    <p class="lead">Browse our full roster and themed playlist albums, listen right here on the page and send a licensing or booking request in under a minute.</p>
+    <div class="cta"><a class="btn btn-primary" href="#catalog">Explore the catalog</a><a class="btn btn-ghost" href="#roster">Meet the artists</a></div>
+    <div class="stats"><div><b>40+</b>artists</div><div><b>25</b>compilations</div><div><b>1,200</b>tracks</div></div>
+  </div>
+  <div class="feature">
+    <div class="cover c1">Golden Hour<br>Sessions Vol. 3</div>
+    <div class="player"><button class="play" aria-label="Play preview"></button><div class="wave"></div><div class="meta">2:48</div></div>
+    <div class="note">Featured compilation · placeholder player (the real embedded player goes here)</div>
+  </div>
+</div></section>
+
+<section id="catalog"><div class="wrap">
+  <div class="sec-head">
+    <div><div class="eyebrow">Catalog</div><h2>Find the right sound</h2></div>
+    <div class="tools">
+      <input class="search" id="q" type="search" placeholder="Search artist, album or mood..." aria-label="Search catalog">
+    </div>
+  </div>
+  <div class="tools" style="margin-bottom:1.2rem">
+    <button class="chip active" data-f="all">All</button><button class="chip" data-f="compilation">Compilations</button><button class="chip" data-f="album">Artist releases</button><button class="chip" data-f="chill">Chill</button><button class="chip" data-f="cinematic">Cinematic</button><button class="chip" data-f="upbeat">Upbeat</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty">No releases match your search.</p>
+</div></section>
+
+<section id="roster"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">Roster</div><h2>Our artists</h2></div><a class="btn btn-ghost" href="#catalog">View full roster</a></div>
+  <div class="roster">
+    <div class="artist"><div class="ph c3">Mira Vale</div><div class="body"><span class="tag">Indie pop · Singer-songwriter</span><p>Warm vocals and bright hooks, with placements in lifestyle ads and streaming series.</p><div class="links"><a href="#">Spotify</a><a href="#">YouTube</a><button data-enquiry="Mira Vale">Licensing / Booking</button></div></div></div>
+    <div class="artist"><div class="ph c2">The Low Tides</div><div class="body"><span class="tag">Alt rock · Band</span><p>Driving guitars and big choruses, a catalog built for trailers, sport and gaming.</p><div class="links"><a href="#">Spotify</a><a href="#">YouTube</a><button data-enquiry="The Low Tides">Licensing / Booking</button></div></div></div>
+    <div class="artist"><div class="ph c5">Kai Okoro</div><div class="body"><span class="tag">Electronic · Producer</span><p>Atmospheric beats and textures, ideal for brand films, podcasts and background playlists.</p><div class="links"><a href="#">Spotify</a><a href="#">YouTube</a><button data-enquiry="Kai Okoro">Licensing / Booking</button></div></div></div>
+  </div>
+</div></section>
+
+<section id="licensing"><div class="wrap licensing">
+  <div><div class="eyebrow">Sync &amp; licensing</div><h2>Need a track for film, TV, ads or games?</h2>
+    <ul><li>One-stop clearance for publishing and master where available</li><li>Custom playlists curated for your brief</li><li>Fast quotes, usually within 48 hours</li></ul></div>
+  <div><button class="btn btn-primary" data-enquiry="Sync brief">Send a licensing brief</button><p class="note">Opens a short form. Messages go straight to your inbox, with spam protection.</p></div>
+</div></section>
+
+<section id="news"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">Updates</div><h2>Latest news</h2></div></div>
+  <div class="news">
+    <article><time>Nov 2026</time><h3>Golden Hour Sessions Vol. 3 is out</h3><p>Twelve sun-soaked tracks from across the roster, curated for summer campaigns.</p></article>
+    <article><time>Oct 2026</time><h3>The Low Tides sign new deal</h3><p>Their next album joins the catalog early next year, with sync-ready stems.</p></article>
+    <article><time>Sep 2026</time><h3>Kai Okoro in a streaming series</h3><p>Two tracks placed in the opening episode of a new drama series.</p></article>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap foot">
+  <div><strong style="color:var(--ink)">Northtone Publishing</strong><br>hello@example.com · London, UK (placeholder)</div>
+  <div>Spotify · YouTube · Instagram</div>
+  <div>Homepage mockup prepared for a proposal. Sample names and content.</div>
+</div></footer>
+
+<dialog id="dlg"><form method="dialog" id="f">
+  <h3 style="margin:0">Licensing / Booking enquiry</h3>
+  <label>Artist or release<input id="subj" name="subject"></label>
+  <label>Your name<input required></label>
+  <label>Email<input type="email" required></label>
+  <label>Type of request<select><option>Sync licensing</option><option>Booking</option><option>Playlist / compilation</option><option>Other</option></select></label>
+  <label>Message<textarea rows="3" placeholder="Project, usage, territory, dates..."></textarea></label>
+  <div class="row"><button class="btn btn-ghost" value="cancel" formnovalidate>Cancel</button><button class="btn btn-primary" value="ok">Send (demo)</button></div>
+</form></dialog>
+
+<script>
+const items=[
+ {t:"Golden Hour Sessions Vol. 3",a:"Various artists",k:"compilation chill",c:"c1"},
+ {t:"Night Drive",a:"Kai Okoro",k:"album chill",c:"c5"},
+ {t:"Paper Lanterns",a:"Mira Vale",k:"album upbeat",c:"c3"},
+ {t:"Epic Horizons",a:"Various artists",k:"compilation cinematic",c:"c7"},
+ {t:"Salt & Static",a:"The Low Tides",k:"album upbeat",c:"c2"},
+ {t:"Focus Flow",a:"Various artists",k:"compilation chill",c:"c4"},
+ {t:"Wild Country Roads",a:"Various artists",k:"compilation upbeat",c:"c6"},
+ {t:"Midnight Score",a:"Kai Okoro",k:"album cinematic",c:"c8"}];
+const g=document.getElementById('grid'),q=document.getElementById('q'),empty=document.getElementById('empty');let f='all';
+function bars(){return Array.from({length:22},()=>`<span style="height:${30+Math.random()*70}%;animation-delay:${Math.random()}s"></span>`).join('')}
+function render(){const s=q.value.toLowerCase();const list=items.filter(i=>(f==='all'||i.k.includes(f))&&(i.t+i.a+i.k).toLowerCase().includes(s));
+ g.innerHTML=list.map(i=>`<div class="card"><div class="cover ${i.c}">${i.t}</div><h3>${i.t}</h3><div class="meta">${i.a}</div><span class="tag">${i.k.split(' ').join(' · ')}</span><div class="player"><button class="play" aria-label="Play"></button><div class="wave">${bars()}</div></div><div class="links"><a href="#">Spotify</a><a href="#">YouTube</a><button data-enquiry="${i.t}">Enquire</button></div></div>`).join('');
+ empty.style.display=list.length?'none':'block'}
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');f=c.dataset.f;render()});
+q.oninput=render;render();
+document.querySelector('.feature .wave').innerHTML=bars();
+document.addEventListener('click',e=>{const p=e.target.closest('.play');if(p){const w=p.nextElementSibling;const on=!p.classList.contains('on');document.querySelectorAll('.play.on').forEach(x=>{x.classList.remove('on');x.nextElementSibling.classList.remove('on')});if(on){p.classList.add('on');w.classList.add('on')}}
+ const b=e.target.closest('[data-enquiry]');if(b){document.getElementById('subj').value=b.dataset.enquiry;document.getElementById('dlg').showModal()}});
+</script>
+</body>
+</html>
