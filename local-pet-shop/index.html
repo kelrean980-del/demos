@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oak &amp; Paw Pet Supplies | Independent Pet Shop (Demo)</title>
+<meta name="description" content="Homepage mockup for an independent local pet shop: dog and cat food, treats, toys, collars, beds and grooming supplies. Demo only.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#3f6b4f;--green-d:#2c4d38;--sage:#a9c1a2;--beige:#f4ede1;--sand:#e8dcc6;--ink:#26302a;--muted:#5d6a61;--white:#fffdf9;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+.demo-flag{background:var(--green-d);color:#e9f0e6;text-align:center;font-size:.8rem;padding:.35rem 1rem;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:Fraunces,serif;font-size:1.35rem;font-weight:700;text-decoration:none;color:var(--green-d)}
+.logo span{width:38px;height:38px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+nav ul{display:flex;gap:1.8rem;list-style:none}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.4rem;border-radius:999px;border:0;cursor:pointer;font:inherit;transition:background .2s}
+.btn:hover{background:var(--green-d)}
+.btn.ghost{background:transparent;color:var(--green-d);border:2px solid var(--green)}
+.btn.ghost:hover{background:var(--green);color:#fff}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.hero{background:linear-gradient(135deg,var(--beige),#efe6d4);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding:4.5rem 0}
+.eyebrow{display:inline-block;background:#fff;border:1px solid var(--sand);color:var(--green);font-weight:600;font-size:.85rem;padding:.3rem .8rem;border-radius:999px;margin-bottom:1.1rem}
+h1,h2,h3{font-family:Fraunces,serif;line-height:1.15;color:var(--green-d)}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:34rem;margin-bottom:1.8rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.quick{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap;font-size:.92rem;color:var(--muted)}
+.quick b{color:var(--ink)}
+.hero-art{position:relative;aspect-ratio:1/1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:var(--sage);display:grid;place-items:center;box-shadow:0 30px 60px -30px rgba(44,77,56,.45)}
+.hero-art .tag{position:absolute;background:#fff;border-radius:14px;padding:.6rem .9rem;font-size:.85rem;font-weight:600;box-shadow:0 10px 25px -12px rgba(0,0,0,.25)}
+.tag.t1{top:12%;left:-4%}.tag.t2{bottom:14%;right:-2%}
+section{padding:4.5rem 0}
+.head{text-align:center;max-width:40rem;margin:0 auto 2.5rem}
+.head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:.6rem}
+.head p{color:var(--muted)}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.cat{background:var(--beige);border-radius:var(--r);padding:1.6rem 1.3rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cat:hover{transform:translateY(-4px);box-shadow:0 18px 30px -20px rgba(44,77,56,.5)}
+.cat .ic{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;margin-bottom:1rem}
+.cat h3{font-size:1.15rem;margin-bottom:.3rem}
+.cat p{font-size:.92rem;color:var(--muted)}
+.products{background:var(--beige)}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:2rem}
+.filters button{font:inherit;font-weight:500;border:1px solid var(--sand);background:#fff;color:var(--muted);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.filters button.on,.filters button:hover{background:var(--green);border-color:var(--green);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.item{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--sand)}
+.item .pic{height:150px;display:grid;place-items:center}
+.item .body{padding:1.1rem 1.2rem 1.3rem}
+.item small{color:var(--green);font-weight:600;text-transform:uppercase;font-size:.72rem;letter-spacing:.06em}
+.item h3{font-size:1.1rem;margin:.2rem 0 .3rem}
+.item p{font-size:.9rem;color:var(--muted)}
+.item[hidden]{display:none}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-art{border-radius:var(--r);background:var(--sand);aspect-ratio:4/3;display:grid;place-items:center}
+.about h2{font-size:2.2rem;margin-bottom:1rem}
+.about p{color:var(--muted);margin-bottom:1rem}
+.points{list-style:none;display:grid;gap:.6rem;margin-top:1.2rem}
+.points li{display:flex;gap:.6rem;align-items:flex-start}
+.points li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%232c4d38' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.visit{background:var(--green-d);color:#e9f0e6}
+.visit h2{color:#fff}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:1.8rem}
+.hours{width:100%;border-collapse:collapse;margin:1rem 0 1.4rem}
+.hours td{padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hours td:last-child{text-align:right}
+.map{margin-top:1rem;border-radius:12px;height:170px;background:repeating-linear-gradient(45deg,#365c44 0 14px,#3a6249 14px 28px);display:grid;place-items:center;color:#cfe0c9;font-size:.9rem;text-align:center;padding:1rem}
+form{display:grid;gap:.8rem;margin-top:1rem}
+label{font-size:.85rem;font-weight:500}
+input,textarea{width:100%;font:inherit;padding:.75rem .9rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.95);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.visit .btn{background:var(--sage);color:var(--green-d)}
+.visit .btn:hover{background:#fff}
+.note{font-size:.8rem;opacity:.75}
+footer{background:#203a2a;color:#b9c9b5;padding:1.6rem 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media (max-width:900px){
+ .hero .wrap,.about .wrap,.visit .wrap{grid-template-columns:1fr}
+ .hero .wrap{padding:3rem 0;gap:2rem}
+ .hero-art{max-width:380px;margin:auto;width:100%}
+ .cats{grid-template-columns:repeat(2,1fr)}
+ .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+ .menu-btn{display:block}
+ nav{position:absolute;top:70px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--sand);display:none}
+ nav.open{display:block}
+ nav ul{flex-direction:column;gap:0;padding:.5rem 4%}
+ nav li a{display:block;padding:.8rem 0;border-bottom:1px solid var(--beige)}
+ .nav .btn.call{display:none}
+}
+@media (max-width:540px){
+ .cats,.grid{grid-template-columns:1fr}
+ section{padding:3.2rem 0}
+ .tag.t1{left:2%}.tag.t2{right:2%}
+}
+</style>
+</head>
+<body>
+<div class="demo-flag">Demo / boceto para la propuesta: homepage mockup with placeholder name and content</div>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="#f4ede1"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5.5" r="2.2"/><circle cx="14" cy="5.5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 10.5c-3 0-6 4.5-6 7 0 1.8 1.5 2.5 3 2.5 1.2 0 2-.6 3-.6s1.8.6 3 .6c1.5 0 3-.7 3-2.5 0-2.5-3-7-6-7z"/></svg></span>Oak &amp; Paw</a>
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="var n=document.querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#2c4d38" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav aria-label="Main"><ul>
+   <li><a href="#products">Products</a></li>
+   <li><a href="#about">About us</a></li>
+   <li><a href="#visit">Visit &amp; contact</a></li>
+  </ul></nav>
+  <a class="btn call" href="#visit">Find the shop</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">Independent pet shop on your high street</span>
+   <h1>Good food, treats and everyday essentials for happy dogs and cats</h1>
+   <p>We are a small, family-run pet shop stocking quality food, toys, beds and grooming supplies, with friendly advice whenever you pop in.</p>
+   <div class="cta"><a class="btn" href="#products">Browse our products</a><a class="btn ghost" href="#visit">Opening hours</a></div>
+   <div class="quick"><span><b>Open today</b> 9:00 to 17:30</span><span><b>Call</b> 0121 000 0000</span></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Illustration of a dog and a cat">
+   <svg viewBox="0 0 320 260" width="78%">
+    <ellipse cx="160" cy="238" rx="130" ry="14" fill="#8fab88"/>
+    <!-- dog -->
+    <path d="M70 230c-4-50 6-92 44-104 32-10 58 8 62 46l4 58z" fill="#c89b6d"/>
+    <circle cx="122" cy="98" r="44" fill="#d8ad80"/>
+    <path d="M84 72c-16 4-22 34-10 52 6-10 12-30 10-52zM160 72c16 4 22 34 10 52-6-10-12-30-10-52z" fill="#8a5f3c"/>
+    <circle cx="108" cy="94" r="5" fill="#26302a"/><circle cx="136" cy="94" r="5" fill="#26302a"/>
+    <ellipse cx="122" cy="112" rx="9" ry="6.5" fill="#26302a"/>
+    <path d="M114 122q8 8 16 0" stroke="#26302a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <rect x="94" y="136" width="56" height="10" rx="5" fill="#3f6b4f"/><circle cx="122" cy="152" r="6" fill="#e8c35a"/>
+    <!-- cat -->
+    <path d="M196 232c-6-40 2-74 30-82 26-7 46 12 46 44 0 16-4 30-8 38z" fill="#7d8a90"/>
+    <path d="M276 222c26-6 30-34 14-44" stroke="#7d8a90" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <circle cx="232" cy="128" r="34" fill="#8e9ba1"/>
+    <path d="M204 112l4-34 22 22zM260 112l-4-34-22 22z" fill="#8e9ba1"/>
+    <path d="M210 104l2-18 10 10zM254 104l-2-18-10 10z" fill="#e9b7a8"/>
+    <ellipse cx="220" cy="126" rx="4" ry="6" fill="#26302a"/><ellipse cx="244" cy="126" rx="4" ry="6" fill="#26302a"/>
+    <path d="M228 138l4 4 4-4z" fill="#e9b7a8"/>
+    <path d="M206 140l-18-2M206 146l-18 4M258 140l18-2M258 146l18 4" stroke="#f4ede1" stroke-width="2" stroke-linecap="round"/>
+   </svg>
+   <div class="tag t1">Locally owned since 2010</div>
+   <div class="tag t2">Free advice in store</div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="head"><h2>What you will find in store</h2><p>Everything your pets need day to day, chosen with care and fairly priced.</p></div>
+  <div class="cats">
+   <a class="cat" href="#products" data-go="dog"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3f6b4f" stroke-width="2" stroke-linecap="round"><path d="M5 9l2-4 3 2h4l3-2 2 4-2 9H7z"/><circle cx="10" cy="12" r=".6" fill="#3f6b4f"/><circle cx="14" cy="12" r=".6" fill="#3f6b4f"/></svg></div><h3>Dog food</h3><p>Dry, wet and grain-free recipes for puppies to seniors.</p></a>
+   <a class="cat" href="#products" data-go="cat"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3f6b4f" stroke-width="2" stroke-linejoin="round"><path d="M5 20V8l3-4 2 4h4l2-4 3 4v12z"/></svg></div><h3>Cat food</h3><p>Complete meals and pouches for fussy and sensitive cats.</p></a>
+   <a class="cat" href="#products" data-go="treats"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3f6b4f" stroke-width="2" stroke-linecap="round"><path d="M7 9a2.5 2.5 0 1 1 2-4l6 6a2.5 2.5 0 1 1 4 2 2.5 2.5 0 1 1-4 2L9 9a2.5 2.5 0 1 1-2 0z"/></svg></div><h3>Treats &amp; toys</h3><p>Natural chews, training treats and toys that last.</p></a>
+   <a class="cat" href="#products" data-go="care"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3f6b4f" stroke-width="2" stroke-linecap="round"><path d="M4 14h16v3a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 14V9a6 6 0 0 1 12 0v5"/></svg></div><h3>Beds, leads &amp; grooming</h3><p>Collars, leads, cosy beds and basic grooming kits.</p></a>
+  </div>
+ </div>
+</section>
+
+<section class="products" id="products">
+ <div class="wrap">
+  <div class="head"><h2>Browse by category</h2><p>A taste of what we stock. Ask us in store if you are looking for something specific.</p></div>
+  <div class="filters" role="tablist">
+   <button class="on" data-f="all">All</button><button data-f="dog">Dog food</button><button data-f="cat">Cat food</button><button data-f="treats">Treats &amp; toys</button><button data-f="care">Beds, leads &amp; grooming</button>
+  </div>
+  <div class="grid">
+   <article class="item" data-c="dog"><div class="pic" style="background:#e3d3b8"><svg width="70" viewBox="0 0 64 64"><rect x="14" y="10" width="36" height="46" rx="6" fill="#3f6b4f"/><rect x="20" y="22" width="24" height="16" rx="3" fill="#f4ede1"/><circle cx="32" cy="30" r="4" fill="#c89b6d"/></svg></div><div class="body"><small>Dog food</small><h3>Grain-free adult dry food</h3><p>Balanced recipes with real meat for everyday feeding.</p></div></article>
+   <article class="item" data-c="dog"><div class="pic" style="background:#dfe7d6"><svg width="70" viewBox="0 0 64 64"><ellipse cx="32" cy="44" rx="22" ry="8" fill="#c89b6d"/><path d="M10 40h44l-4 10H14z" fill="#3f6b4f"/></svg></div><div class="body"><small>Dog food</small><h3>Puppy and senior ranges</h3><p>Gentle formulas for every life stage.</p></div></article>
+   <article class="item" data-c="cat"><div class="pic" style="background:#e6e1ea"><svg width="70" viewBox="0 0 64 64"><rect x="16" y="18" width="32" height="34" rx="5" fill="#7d8a90"/><path d="M22 18l4-8 4 8M34 18l4-8 4 8" fill="#7d8a90"/><rect x="22" y="30" width="20" height="12" rx="3" fill="#f4ede1"/></svg></div><div class="body"><small>Cat food</small><h3>Wet food pouches</h3><p>Fish and poultry flavours, single or multipacks.</p></div></article>
+   <article class="item" data-c="cat"><div class="pic" style="background:#efe3d3"><svg width="70" viewBox="0 0 64 64"><rect x="14" y="12" width="36" height="44" rx="6" fill="#a9c1a2"/><circle cx="32" cy="32" r="8" fill="#fffdf9"/></svg></div><div class="body"><small>Cat food</small><h3>Sensitive and indoor cat</h3><p>Complete dry food for delicate tummies.</p></div></article>
+   <article class="item" data-c="treats"><div class="pic" style="background:#f1dfc9"><svg width="70" viewBox="0 0 64 64"><path d="M16 26a6 6 0 1 1 6-8l20 20a6 6 0 1 1 8 6 6 6 0 1 1-8 4L22 28a6 6 0 1 1-6-2z" fill="#d8ad80"/></svg></div><div class="body"><small>Treats &amp; toys</small><h3>Natural chews and treats</h3><p>Long-lasting chews and low-fat training bites.</p></div></article>
+   <article class="item" data-c="treats"><div class="pic" style="background:#dfe7d6"><svg width="70" viewBox="0 0 64 64"><circle cx="32" cy="32" r="18" fill="#e8c35a"/><path d="M16 26q16 10 32 0M16 38q16-10 32 0" stroke="#fffdf9" stroke-width="3" fill="none"/></svg></div><div class="body"><small>Treats &amp; toys</small><h3>Durable toys</h3><p>Balls, ropes and puzzle toys for dogs and cats.</p></div></article>
+   <article class="item" data-c="care"><div class="pic" style="background:#e3d3b8"><svg width="70" viewBox="0 0 64 64"><path d="M10 34c0-8 10-12 22-12s22 4 22 12v8H10z" fill="#3f6b4f"/><ellipse cx="32" cy="34" rx="16" ry="6" fill="#a9c1a2"/></svg></div><div class="body"><small>Beds, leads &amp; grooming</small><h3>Cosy beds</h3><p>Washable beds and blankets in several sizes.</p></div></article>
+   <article class="item" data-c="care"><div class="pic" style="background:#e6e1ea"><svg width="70" viewBox="0 0 64 64"><path d="M14 20q18-10 36 0" stroke="#3f6b4f" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M32 16v32" stroke="#c89b6d" stroke-width="4"/><circle cx="32" cy="50" r="4" fill="#e8c35a"/></svg></div><div class="body"><small>Beds, leads &amp; grooming</small><h3>Collars and leads</h3><p>Comfortable, adjustable and reflective options.</p></div></article>
+   <article class="item" data-c="care"><div class="pic" style="background:#efe3d3"><svg width="70" viewBox="0 0 64 64"><rect x="26" y="8" width="12" height="30" rx="4" fill="#7d8a90"/><rect x="18" y="38" width="28" height="10" rx="3" fill="#3f6b4f"/><path d="M20 48v8M26 48v8M32 48v8M38 48v8M44 48v8" stroke="#3f6b4f" stroke-width="2"/></svg></div><div class="body"><small>Beds, leads &amp; grooming</small><h3>Grooming basics</h3><p>Brushes, shampoos and nail clippers.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="wrap">
+  <div class="about-art" role="img" aria-label="Shop front illustration">
+   <svg viewBox="0 0 300 220" width="80%"><rect x="40" y="70" width="220" height="130" fill="#fffdf9"/><path d="M30 70h240l-14-36H44z" fill="#3f6b4f"/><path d="M44 70v14q14 10 28 0 14 10 28 0 14 10 28 0 14 10 28 0 14 10 28 0 14 10 28 0 14 10 28 0V70" fill="#a9c1a2"/><rect x="60" y="104" width="80" height="60" rx="4" fill="#e3d3b8"/><rect x="170" y="104" width="64" height="96" rx="4" fill="#c89b6d"/><circle cx="222" cy="154" r="4" fill="#26302a"/><text x="150" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#f4ede1">OAK &amp; PAW</text></svg>
+  </div>
+  <div>
+   <span class="eyebrow">About us</span>
+   <h2>A proper local pet shop, not a warehouse</h2>
+   <p>We are an independent shop run by pet owners for pet owners. We know many of our customers, and their dogs and cats, by name.</p>
+   <p>If you are not sure which food suits your pet, or need a new bed or lead, come in for a chat. We are always happy to help.</p>
+   <ul class="points"><li>Carefully chosen brands for dogs and cats</li><li>Honest advice, no pressure</li><li>Supporting local customers and rescues</li></ul>
+  </div>
+ </div>
+</section>
+
+<section class="visit" id="visit">
+ <div class="wrap">
+  <div class="card">
+   <h2>Visit the shop</h2>
+   <p style="margin-top:.6rem">12 Example High Street, Your Town, AB1 2CD<br>Phone: <a href="tel:+441210000000">0121 000 0000</a></p>
+   <table class="hours" aria-label="Opening hours">
+    <tr><td>Monday to Friday</td><td>9:00 to 17:30</td></tr>
+    <tr><td>Saturday</td><td>9:00 to 16:00</td></tr>
+    <tr><td>Sunday</td><td>Closed</td></tr>
+   </table>
+   <a class="btn" href="https://www.google.com/maps" target="_blank" rel="noopener">Get directions</a>
+   <div class="map">Embedded Google Map goes here<br>(real address added in the final site)</div>
+  </div>
+  <div class="card">
+   <h2>Send us a message</h2>
+   <form onsubmit="event.preventDefault();this.querySelector('.note').textContent='Demo only: in the live site this message is emailed to the shop.'">
+    <div><label for="n">Name</label><input id="n" required autocomplete="name"></div>
+    <div><label for="e">Email</label><input id="e" type="email" required autocomplete="email"></div>
+    <div><label for="m">Your enquiry</label><textarea id="m" required></textarea></div>
+    <button class="btn" type="submit">Send message</button>
+    <p class="note">We usually reply within one working day.</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Oak &amp; Paw Pet Supplies (placeholder name)</span><span>Demo / boceto para la propuesta</span></div></footer>
+
+<script>
+var btns=document.querySelectorAll('.filters button'),items=document.querySelectorAll('.item');
+function filt(f){btns.forEach(function(b){b.classList.toggle('on',b.dataset.f===f)});items.forEach(function(i){i.hidden=!(f==='all'||i.dataset.c===f)})}
+btns.forEach(function(b){b.addEventListener('click',function(){filt(b.dataset.f)})});
+document.querySelectorAll('[data-go]').forEach(function(a){a.addEventListener('click',function(){filt(a.dataset.go)})});
+document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('nav').classList.remove('open')})});
+</script>
+</body>
+</html>
