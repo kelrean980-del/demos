@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firma Contable | Contabilidad, impuestos y auditoría para empresas (Demo)</title>
+<meta name="description" content="Boceto de portada para una firma de contadores: contabilidad, impuestos, nómina, auditoría, asesoría financiera y creación de empresas.">
+<meta name="robots" content="noindex">
+<style>
+:root{--ink:#14202e;--muted:#5d6b7a;--navy:#102a43;--navy2:#1c3d5e;--accent:#2f8f83;--gold:#b89552;--line:#e3e8ee;--bg:#f7f8fa}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.demo-bar{background:#0b1d30;color:#cfd8e3;font-size:12.5px;text-align:center;padding:6px 10px;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--navy)}
+.logo span.mark{width:34px;height:34px;border-radius:7px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:15px;font-family:Georgia,serif}
+.menu{display:flex;gap:26px;font-size:15px;color:var(--muted)}
+.menu a:hover{color:var(--navy)}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;font-size:15px;transition:.2s}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:#257569}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.burger{display:none;background:none;border:0;font-size:24px;color:var(--navy);cursor:pointer}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-120px;width:460px;height:460px;border-radius:50%;border:60px solid rgba(255,255,255,.04)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;position:relative;z-index:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--gold);font-weight:600}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:46px;line-height:1.15;margin:14px 0 18px}
+.hero p{color:#c9d6e3;font-size:18px;max-width:560px}
+.hero .ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.card-kpi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px}
+.card-kpi .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.card-kpi .row:last-child{border:0}
+.card-kpi b{font-size:26px;font-family:Georgia,serif;font-weight:400;color:#fff}
+.card-kpi small{color:#aebdcc;font-size:13.5px;align-self:center;text-align:right;max-width:55%}
+.trust{border-bottom:1px solid var(--line);background:var(--bg)}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:12px 34px;justify-content:center;padding:20px 22px;color:var(--muted);font-size:14px}
+.trust span:before{content:"✓";color:var(--accent);font-weight:700;margin-right:8px}
+section{padding:84px 0}
+.head{max-width:640px;margin-bottom:44px}
+.head h2{font-family:Georgia,serif;font-weight:400;font-size:34px;color:var(--navy);margin:8px 0 10px;line-height:1.2}
+.head p{color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{border:1px solid var(--line);border-radius:10px;padding:30px;background:#fff;transition:.2s}
+.svc:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(16,42,67,.08);transform:translateY(-2px)}
+.svc .ic{width:44px;height:44px;border-radius:8px;background:#e8f3f1;color:var(--accent);display:grid;place-items:center;font-weight:700;margin-bottom:18px;font-family:Georgia,serif}
+.svc h3{font-size:19px;color:var(--navy);margin-bottom:10px}
+.svc ul{list-style:none;color:var(--muted);font-size:15px}
+.svc li{padding:4px 0}
+.svc li:before{content:"— ";color:var(--gold)}
+.svc a.more{display:inline-block;margin-top:14px;font-weight:600;color:var(--accent);font-size:14.5px}
+.split{background:var(--bg)}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.img-ph{aspect-ratio:4/3;border-radius:12px;background:linear-gradient(160deg,#dfe7ef,#c3d1df);display:grid;place-items:center;color:#6a7f94;font-size:14px;text-align:center;padding:20px}
+.steps{list-style:none;counter-reset:s;margin-top:20px}
+.steps li{counter-increment:s;padding:14px 0 14px 54px;position:relative;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:13px;font-family:Georgia,serif;font-size:22px;color:var(--gold)}
+.steps b{color:var(--navy)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{border-left:3px solid var(--gold);padding:6px 0 6px 22px}
+.case .sector{font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.case h4{font-size:18px;color:var(--navy);margin:6px 0 8px}
+.case p{color:var(--muted);font-size:15px}
+.blog{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.post .ph{height:150px;background:linear-gradient(135deg,#e6edf3,#d3dee8)}
+.post div.t{padding:20px}
+.post small{color:var(--accent);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em}
+.post h4{color:var(--navy);margin-top:6px;font-size:17px;line-height:1.35}
+.contact{background:var(--navy);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact h2{font-family:Georgia,serif;font-weight:400;font-size:34px;line-height:1.2;margin:8px 0 14px}
+.contact p,.contact li{color:#c9d6e3}
+.contact ul{list-style:none;margin-top:22px}
+.contact li{padding:6px 0}
+form{background:#fff;border-radius:12px;padding:30px;color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{font-size:13.5px;font-weight:600;color:var(--navy);display:block;margin-bottom:5px}
+form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;font:inherit;font-size:15px}
+form .full{grid-column:1/-1}
+form button{border:0;cursor:pointer}
+form small{color:var(--muted);font-size:12.5px}
+footer{background:#0b1d30;color:#8fa1b3;font-size:14px;padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){
+.menu{display:none}.burger{display:block}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 22px;border-bottom:1px solid var(--line)}
+.hero{padding:64px 0 76px}.hero h1{font-size:34px}
+.hero-grid,.split-grid,.contact-grid{grid-template-columns:1fr}
+.services,.cases,.blog{grid-template-columns:1fr}
+section{padding:60px 0}
+form{grid-template-columns:1fr}
+.nav .btn-primary{display:none}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">Demo / boceto para la propuesta · nombre, datos y textos son de ejemplo</div>
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="mark">FC</span>Firma Contable</a>
+    <nav class="menu" id="menu">
+      <a href="#servicios">Servicios</a><a href="#experiencia">Experiencia y equipo</a><a href="#casos">Casos de éxito</a><a href="#blog">Blog</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary">Solicitar reunión</a>
+    <button class="burger" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Contadores públicos · Asesoría para empresas</div>
+      <h1>Un socio contable sólido para empresas que no pueden permitirse errores</h1>
+      <p>Contabilidad, impuestos, nómina y auditoría con un equipo que conoce su sector y responde con rigor, plazos claros y total confidencialidad.</p>
+      <div class="ctas"><a href="#contacto" class="btn btn-primary">Agendar una consulta</a><a href="#servicios" class="btn btn-ghost">Ver servicios</a></div>
+    </div>
+    <div class="card-kpi" aria-label="Cifras de ejemplo">
+      <div class="row"><b>20+</b><small>años de trayectoria (dato de ejemplo)</small></div>
+      <div class="row"><b>150</b><small>empresas y corporativos atendidos</small></div>
+      <div class="row"><b>100%</b><small>declaraciones presentadas en plazo</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust"><div class="wrap"><span>Confidencialidad garantizada</span><span>Equipo certificado</span><span>Informes mensuales claros</span><span>Atención a grandes cuentas</span></div></div>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Áreas de especialidad</div><h2>Servicios pensados para empresas y corporativos</h2><p>Cada servicio tiene su propia página con alcance, proceso y preguntas frecuentes, optimizada para búsquedas de contabilidad corporativa.</p></div>
+    <div class="services">
+      <article class="svc"><div class="ic">01</div><h3>Contabilidad, impuestos y nómina</h3><ul><li>Contabilidad mensual y estados financieros</li><li>Planeación y declaraciones fiscales</li><li>Cálculo de nómina y obligaciones laborales</li></ul><a class="more" href="#">Ver servicio →</a></article>
+      <article class="svc"><div class="ic">02</div><h3>Auditoría, asesoría financiera y cumplimiento</h3><ul><li>Auditoría interna y externa</li><li>Análisis financiero y presupuestos</li><li>Cumplimiento normativo</li></ul><a class="more" href="#">Ver servicio →</a></article>
+      <article class="svc"><div class="ic">03</div><h3>Creación de empresas y trámites</h3><ul><li>Constitución de sociedades</li><li>Registros y altas ante la autoridad fiscal</li><li>Trámites y declaraciones periódicas</li></ul><a class="more" href="#">Ver servicio →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="split" id="experiencia">
+  <div class="wrap split-grid">
+    <div class="img-ph">Foto del equipo / oficina<br>(placeholder)</div>
+    <div>
+      <div class="eyebrow">Experiencia y equipo</div>
+      <div class="head" style="margin-bottom:0"><h2>Cómo trabajamos con su empresa</h2></div>
+      <ol class="steps">
+        <li><b>Diagnóstico inicial.</b> Revisamos su situación contable y fiscal sin coste.</li>
+        <li><b>Plan de trabajo.</b> Calendario de obligaciones y un responsable asignado.</li>
+        <li><b>Seguimiento mensual.</b> Informes claros y reuniones periódicas con dirección.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Casos de éxito</div><h2>Resultados para clientes reales (ejemplos)</h2></div>
+    <div class="cases">
+      <div class="case"><div class="sector">Industria</div><h4>Cierre fiscal reorganizado</h4><p>Ordenamos la contabilidad de tres ejercicios y redujimos el tiempo de cierre a la mitad.</p></div>
+      <div class="case"><div class="sector">Retail</div><h4>Nómina de 300 empleados</h4><p>Migración del proceso de nómina sin incidencias y con reportes automáticos.</p></div>
+      <div class="case"><div class="sector">Servicios</div><h4>Auditoría previa a inversión</h4><p>Informe de auditoría entregado en plazo para una ronda de financiación.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="split" id="blog">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Blog y noticias</div><h2>Actualidad fiscal y contable</h2></div>
+    <div class="blog">
+      <article class="post"><div class="ph"></div><div class="t"><small>Impuestos</small><h4>Calendario fiscal del próximo trimestre: fechas clave</h4></div></article>
+      <article class="post"><div class="ph"></div><div class="t"><small>Nómina</small><h4>Cambios en obligaciones laborales que afectan a su empresa</h4></div></article>
+      <article class="post"><div class="ph"></div><div class="t"><small>Auditoría</small><h4>Cuándo conviene una auditoría interna</h4></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Contacto</div>
+      <h2>Hablemos de las necesidades contables de su empresa</h2>
+      <p>Respondemos en menos de 24 horas hábiles.</p>
+      <ul><li>Dirección de la oficina (ejemplo)</li><li>+00 000 000 000</li><li>contacto@ejemplo.com</li><li>Lunes a viernes, 9:00 a 18:00</li></ul>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('small').textContent='Demo: el formulario real enviará una notificación a su correo.'">
+      <div><label for="n">Nombre</label><input id="n" required></div>
+      <div><label for="e">Empresa</label><input id="e"></div>
+      <div><label for="m">Correo</label><input id="m" type="email" required></div>
+      <div><label for="s">Servicio</label><select id="s"><option>Contabilidad, impuestos y nómina</option><option>Auditoría y asesoría financiera</option><option>Creación de empresas y trámites</option></select></div>
+      <div class="full"><label for="t">Mensaje</label><textarea id="t" rows="4"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Enviar consulta</button> <small></small></div>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Firma Contable · Demo / boceto para la propuesta</span><span>Aviso legal · Privacidad</span></div></footer>
+</body>
+</html>
