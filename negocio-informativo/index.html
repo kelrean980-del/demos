@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu Negocio Local | Servicios, horarios y contacto (Demo)</title>
+<meta name="description" content="Boceto de portada para una web informativa de negocio local: servicios, ubicacion, horarios y contacto por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#0f766e;--c2:#134e4a;--acc:#f59e0b;--bg:#f8fafc;--tx:#0f172a;--mu:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--tx);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.demo{background:#fef3c7;color:#92400e;text-align:center;font-size:.8rem;padding:.35rem}
+header{position:sticky;top:0;background:#fff;box-shadow:0 1px 8px rgba(0,0,0,.06);z-index:10}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.2rem}
+.logo{font-weight:800;font-size:1.2rem;color:var(--c2)}.logo span{color:var(--acc)}
+.nav ul{display:flex;gap:1.4rem;list-style:none;font-weight:600;font-size:.95rem}
+.nav ul a:hover{color:var(--c1)}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:10px;font-weight:700}
+.btn-p{background:var(--acc);color:#1f2937}.btn-w{background:#25d366;color:#fff}.btn-o{border:2px solid #fff;color:#fff}
+.hero{background:linear-gradient(120deg,rgba(19,78,74,.92),rgba(15,118,110,.8)),url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1600&q=70') center/cover;color:#fff;padding:5.5rem 1.2rem 4.5rem}
+.hero .in{max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;max-width:700px}
+.hero p{margin:1rem 0 1.8rem;max-width:560px;font-size:1.1rem;opacity:.95}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.quick{max-width:1100px;margin:-2.5rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:0 1.2rem;position:relative}
+.quick div{background:#fff;border-radius:14px;padding:1.2rem 1.3rem;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.quick b{display:block;color:var(--c1);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+section{max-width:1100px;margin:auto;padding:4rem 1.2rem}
+h2{font-size:1.9rem;margin-bottom:.4rem}.sub{color:var(--mu);margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:#fff;border-radius:14px;padding:1.6rem;border:1px solid #e2e8f0}
+.card .ic{width:46px;height:46px;border-radius:12px;background:#ccfbf1;display:grid;place-items:center;font-weight:800;color:var(--c1);margin-bottom:.9rem}
+.card p{color:var(--mu);font-size:.95rem}
+.loc{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem;align-items:stretch}
+.map{border-radius:14px;overflow:hidden;min-height:320px;border:1px solid #e2e8f0}
+.map iframe{width:100%;height:100%;min-height:320px;border:0}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}
+td{padding:.75rem 1rem;border-bottom:1px solid #eef2f7}td:last-child{text-align:right;font-weight:600}
+.open{display:inline-block;background:#dcfce7;color:#166534;border-radius:99px;padding:.2rem .7rem;font-size:.8rem;font-weight:700;margin-bottom:.8rem}
+.contact{background:var(--c2);color:#fff;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2.5rem}
+.contact p{opacity:.9}
+form{display:grid;gap:.7rem}
+input,textarea{width:100%;padding:.8rem;border-radius:10px;border:0;font:inherit}
+footer{text-align:center;color:var(--mu);font-size:.85rem;padding:2rem 1rem}
+.fab{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;border-radius:99px;padding:.8rem 1.1rem;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+@media(max-width:820px){.nav ul{display:none}.quick,.grid,.loc,.contact{grid-template-columns:1fr}.quick{margin-top:-1.5rem}.contact{padding:1.6rem}}
+</style>
+</head>
+<body>
+<div class="demo">Demo / boceto para la propuesta - nombre, textos e imagenes de ejemplo</div>
+<header><nav class="nav"><a class="logo" href="#">Tu<span>Negocio</span></a>
+<ul><li><a href="#servicios">Servicios</a></li><li><a href="#ubicacion">Ubicacion y horarios</a></li><li><a href="#contacto">Contacto</a></li></ul>
+<a class="btn btn-p" href="tel:+34600000000">Llamar</a></nav></header>
+<div class="hero"><div class="in">
+<h1>Todo lo que necesitas saber de nosotros, en un vistazo</h1>
+<p>Que hacemos, donde estamos, cuando abrimos y como contactarnos. Rapido y claro desde el movil.</p>
+<div class="cta"><a class="btn btn-w" href="#contacto">Escribenos por WhatsApp</a><a class="btn btn-o" href="#servicios">Ver servicios</a></div>
+</div></div>
+<div class="quick">
+<div><b>Horario hoy</b>09:00 - 14:00 y 16:30 - 20:00</div>
+<div><b>Direccion</b>Calle Ejemplo 12, Tu Ciudad</div>
+<div><b>Telefono</b>+34 600 000 000</div>
+</div>
+<section id="servicios"><h2>Nuestros servicios</h2><p class="sub">Una descripcion breve de cada servicio, facil de editar desde el panel.</p>
+<div class="grid">
+<div class="card"><div class="ic">01</div><h3>Servicio principal</h3><p>Explica en dos lineas que ofreces y para quien es. Ideal para captar la atencion de quien llega desde Google.</p></div>
+<div class="card"><div class="ic">02</div><h3>Segundo servicio</h3><p>Ventajas claras, precio orientativo si quieres mostrarlo y un enlace directo a pedir informacion.</p></div>
+<div class="card"><div class="ic">03</div><h3>Tercer servicio</h3><p>Puedes anadir, quitar o reordenar servicios tu mismo sin tocar codigo.</p></div>
+</div></section>
+<section id="ubicacion"><h2>Ubicacion y horarios</h2><p class="sub">Mapa integrado y horario de apertura siempre actualizado.</p>
+<div class="loc">
+<div class="map"><iframe loading="lazy" title="Mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.712%2C40.413%2C-3.697%2C40.421&layer=mapnik"></iframe></div>
+<div><span class="open">Abierto ahora</span>
+<table><tr><td>Lunes - Viernes</td><td>09:00 - 14:00 / 16:30 - 20:00</td></tr><tr><td>Sabado</td><td>10:00 - 14:00</td></tr><tr><td>Domingo y festivos</td><td>Cerrado</td></tr></table></div>
+</div></section>
+<section id="contacto"><div class="contact">
+<div><h2>Hablemos</h2><p>Envianos tu consulta y te respondemos el mismo dia. Si lo prefieres, llamanos o escribenos por WhatsApp.</p><br>
+<a class="btn btn-w" href="#">WhatsApp</a> <a class="btn btn-p" href="tel:+34600000000">Llamar ahora</a></div>
+<form onsubmit="event.preventDefault();this.innerHTML='<p>Gracias, este es un formulario de demostracion.</p>'"><input placeholder="Nombre" required><input type="email" placeholder="Email" required><textarea rows="4" placeholder="Tu consulta"></textarea><button class="btn btn-p" style="border:0;cursor:pointer">Enviar consulta</button></form>
+</div></section>
+<footer>Boceto de portada preparado por Cristian Rico - Demo sin datos reales del cliente</footer>
+<a class="fab" href="#contacto">WhatsApp</a>
+</body></html>
